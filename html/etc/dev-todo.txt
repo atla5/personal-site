@@ -1,0 +1,35 @@
+-create some sort of global variable to replace all the relative path calls and fix the problem
+ they've created in the .php includes.
+
+-craft a rather basic shell script to take in a .txt file and spit out a .php usable by the site
+ (this will allow me to write freely and prevent me from having to rewrite the includes and html
+ tags manually for every new page and blog post)
+->create a basic template .php file (with html tags, include, and open body) and simply parse 
+  the text inside the file line by line converting it to .html while keeping formatting... 
+  someone has almost certainly done this already with markup, find and adapt that.
+->create a standardized format for these .txt files specifying type, tags, destination, etc.
+->'-t' tag for adding a custom title to the created webpage. otherwise default to the filename
+  before the extension (e.g. "about.txt" -> "Aidan Sawyer | About", "unix-philosophy.txt" ->
+  "Aidan Sawyer | Unix Philosophy")...
+->'-i' interactive mode might make some sense for individual files and would save from having
+  to format each individual file with the section of the blog it goes to and what tags are 
+  associated with it.
+
+-design main pages for home, about, software, philosophy, blog, and library. and how a single
+ entry in each of these pages will look. 
+
+-actually host this thing somewhere
+->decide upon and purchase domain name,
+->figure out hosting situation,
+->place a redirect on rit-hosted site
+
+-investigate possible APIs and external tools to enrich content and expand toolset:
+->linked in and social networks for about page
+->librarything, goodreads, or amazon.com API for 'library' page
+->blogging could be a very annoying and possibly not all too enlightening task that has been
+  done the world over. find a way to integrate that into the system.
+->add a dropdown with a gravatar whenever you click my name in the top left.
+
+-develop some sort of tagging system to make the search bar actually mean something. 
+->smart tags for songs and books that link to other articles
+->intelligent sidebar that loads relevant information from within (or without) subdomain 
