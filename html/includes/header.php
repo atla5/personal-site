@@ -3,13 +3,13 @@
 <head>
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" type="text/css" href="../res/bootstrap-3.3.6-dist/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="../../res/bootstrap-3.3.6-dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../../css/navbar.css">
 
   <!-- || external scripts || -->
-  <script src="../res/jquery-1.11.3.min.js"></script>
-  <script src="../res/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-  <script src="../js/scripts.js"></script>
+  <script src="../../res/jquery-1.11.3.min.js"></script>
+  <script src="../../res/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+  <script src="../../js/scripts.js"></script>
 
 </head>
 
@@ -142,6 +142,6 @@
 }
 
 //-->
-
+</script>
 
 </html>
