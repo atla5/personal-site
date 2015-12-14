@@ -109,7 +109,7 @@
             <div class="form-group">
               <input type="text" class="form-control" id="tfSearch" placeholder="Search">
             </div>
-            <button type="submit" class="btn btn-default" onclick="alert(search);">Submit</button>
+            <button type="submit" class="btn btn-default" disabled onclick="alert(search);">Submit</button>
           </form>
 
         </div><!-- /.navbar-collapse -->
