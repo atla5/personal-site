@@ -7,7 +7,7 @@
       email: aks5238@rit.edu |
       phone: 585.397.5491 |
       resume:
-        <a href="res/pdf/resume.pdf">software</a>,
+        <a href="/res/pdf/resume.pdf">software</a>,
           philosophy
     </p>
   </div>
