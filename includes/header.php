@@ -3,13 +3,13 @@
 <head>
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" type="text/css" href="/res/bootstrap-3.3.6-dist/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="/css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="../res/bootstrap-3.3.6-dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../css/navbar.css">
 
   <!-- || external scripts || -->
-  <script src="/res/jquery-1.11.3.min.js"></script>
-  <script src="/res/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-  <script src="/js/scripts.js"></script>
+  <script src="../res/jquery-1.11.3.min.js"></script>
+  <script src="../res/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+  <script src="../js/scripts.js"></script>
 
 </head>
 
@@ -46,11 +46,10 @@
             <!-- about -->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                aria-haspopup="true" aria-expanded="false">About<span class="caret">
-                </span></a>
+                aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
               <ul class="dropdown-menu">
 
-                <li><a href="#"><b>About</b></a></li>
+                <li><a href="/html/about/about.php"><b>About</b></a></li>
 
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Work Experience</a></li>
@@ -66,7 +65,7 @@
                 </span></a>
               <ul class="dropdown-menu">
 
-                <li><a href="#"><b>Software</b></a></li>
+                <li><a href="/html/software/swen344/swen344.php"><b>Software</b></a></li>
 
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Amazon Web Services Migration</a></li>
@@ -74,7 +73,10 @@
                 <li><a href="#">EMR Record Creation</a></li>
 
                 <li role="separator" class="divider"></li>
-                <li><a href="#">AidanSawyer.com</a></li>
+                <li><a href="/html/software/swen344/swen344.php">SWEN-344 Web Engineering</a></li>
+
+                <li role="separator" class="divider"></li>
+                <li><a href="#">personal-site</a></li>
                 <li><a href="#">JBioFramework</a></li>
                 <li><a href="#">JColorChanger</a></li>
               </ul>
@@ -98,7 +100,10 @@
               </ul>
             </li>
 
-            <li><a href="#">Library</a></li>
+            <li>
+                <a href="https://www.librarything.com/catalog/aidan.keefe.s/yourlibrary" 
+                   target="_blank" >Library</a>
+            </li>
 
             <li><a href="#">Blog</a></li>
 
@@ -134,7 +139,7 @@
 /* helpers */
 
   /** get and return the query by reading from the search text field */
-  $function getSearchQuery(){
+  function getSearchQuery(){
     var searchTextField = document.getElementById('tfSearch');
     var query = searchTextField.value;
     return query;

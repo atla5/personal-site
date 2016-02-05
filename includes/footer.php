@@ -7,8 +7,8 @@
       email: aks5238@rit.edu |
       phone: 585.397.5491 |
       resume:
-        <a href="/res/pdf/resume.pdf">software</a>,
-          philosophy
+        <a href="http://www.se.rit.edu/~aks5238/res/pdf/resume.pdf" target="_blank">software</a>,
+        <a href="https://independent.academia.edu/AidanSawyer" target="_blank">philosophy</a>
     </p>
   </div>
 </footer>
