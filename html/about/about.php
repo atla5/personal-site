@@ -6,7 +6,7 @@
 
 <body>
 
-  <?php include_once '/includes/header.php'; ?>
+  <?php include_once '../../includes/header.php' ?>
 
   <p>
     I am a Software Engineering (SE) and Philosophy double major at the
@@ -31,7 +31,7 @@
     of human knowledge.
   </p>
 
-  <?php include_once '/includes/footer.php' ?>
+  <?php include_once '../../includes/footer.php' ?>
 
 </body>
 
