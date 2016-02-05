@@ -3,13 +3,13 @@
 <head>
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" type="text/css" href="../res/bootstrap-3.3.6-dist/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="http://www.se.rit.edu/~aks5238/res/bootstrap-3.3.6-dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="http://www.se.rit.edu/~aks5238/css/navbar.css">
 
   <!-- || external scripts || -->
-  <script src="../res/jquery-1.11.3.min.js"></script>
-  <script src="../res/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-  <script src="../js/scripts.js"></script>
+  <script src="http://www.se.rit.edu/~aks5238/res/jquery-1.11.3.min.js"></script>
+  <script src="http://www.se.rit.edu/~aks5238/res/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+  <script src="http://www.se.rit.edu/~aks5238/js/scripts.js"></script>
 
 </head>
 
@@ -65,7 +65,7 @@
                 </span></a>
               <ul class="dropdown-menu">
 
-                <li><a href="/html/software/swen344/swen344.php"><b>Software</b></a></li>
+                <li><a href="http://www.se.rit.edu/~aks5238/html/software/swen344/swen344.php"><b>Software</b></a></li>
 
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Amazon Web Services Migration</a></li>
