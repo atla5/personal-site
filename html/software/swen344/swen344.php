@@ -19,8 +19,8 @@
 </p>
 
 <ul>
-  <li><a href="01-HTTPGetPost/form_get.php">get form</a> </li>
-  <li><a href="01-HTTPGetPost/form_post.php">post form</a> </li>
+  <li><a href="/01-HTTPGetPost/form_get.php">get form</a> </li>
+  <li><a href="/01-HTTPGetPost/form_post.php">post form</a> </li>
 </ul> 
 
 

@@ -34,14 +34,14 @@
             <span class="icon-bar"></span>
 
           </button>
-          <a class="navbar-brand" href="#">Aidan Sawyer</a>
+          <a class="navbar-brand" href="http://www.se.rit.edu/~aks5238/">Aidan Sawyer</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
 
-            <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="http://www.se.rit.edu/~aks5238/">Home<span class="sr-only">(current)</span></a></li>
 
             <!-- about -->
             <li class="dropdown">
@@ -49,7 +49,7 @@
                 aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
               <ul class="dropdown-menu">
 
-                <li><a href="/html/about/about.php"><b>About</b></a></li>
+                <li><a href="./html/about/about.php"><b>About</b></a></li>
 
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Work Experience</a></li>
@@ -65,7 +65,7 @@
                 </span></a>
               <ul class="dropdown-menu">
 
-                <li><a href="http://www.se.rit.edu/~aks5238/html/software/swen344/swen344.php"><b>Software</b></a></li>
+                <li><a href="#"><b>Software</b></a></li>
 
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Amazon Web Services Migration</a></li>
@@ -73,7 +73,7 @@
                 <li><a href="#">EMR Record Creation</a></li>
 
                 <li role="separator" class="divider"></li>
-                <li><a href="/html/software/swen344/swen344.php">SWEN-344 Web Engineering</a></li>
+                <li><a href="http://www.se.rit.edu/~aks5238/html/software/swen344/swen344.php">SWEN-344 Web Engineering</a></li>
 
                 <li role="separator" class="divider"></li>
                 <li><a href="#">personal-site</a></li>
