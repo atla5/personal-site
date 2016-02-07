@@ -14,8 +14,8 @@
   </p>
     
   <ul>
-    <li><a href="#">Node</a></li>
-    <li><a href="#">PHP</a></li>
+    <li><a href="https://secret-brook-98343.herokuapp.com/" target="_blank">Node</a></li>
+    <li><a href="http://www.se.rit.edu/~aks5238/html/software/swen344/02-WebTechnologies/PHP/" target="_blank">PHP</a></li>
     <li><a href="#">Rails</a></li>
   </ul>
     
