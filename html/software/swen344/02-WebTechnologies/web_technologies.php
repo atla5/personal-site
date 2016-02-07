@@ -1,0 +1,23 @@
+<html>
+
+  <title>02-WebTechnologies</title>
+  <?php include_once "../../../../includes/header.php" ?>
+    
+  <h1> SWEN 344 - Web Engineering </h1>
+
+  <h3> Spring 2016 </h3>
+  
+  <p> 
+    <b> <a href="http://www.se.rit.edu/~swen-344/homeworks/webtechnologies.html" target="_blank">Homework 02b</a> 
+      : Web Technologies
+    </b> 
+  </p>
+    
+  <ul>
+    <li><a href="#">Node</a></li>
+    <li><a href="#">PHP</a></li>
+    <li><a href="#">Rails</a></li>
+  </ul>
+    
+  <?php include_once "../../../../includes/footer.php" ?>
+</html>

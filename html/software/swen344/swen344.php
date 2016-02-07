@@ -8,19 +8,13 @@
 
 <h1> SWEN 344 - Web Engineering </h1>
 
-<h4> Spring 16 </h4>
+<h3> Spring 2016 </h3>
 
-<p> Hello professor Krutz! </p>
-
-<p> 
-  <b> <a href="http://www.se.rit.edu/~swen-344/homeworks/http.html" target="_blank"> Homework 01 </a> 
-    : HTTP, Get and Post
-  </b> 
-</p>
-
+<p>Homeworks:</p>
 <ul>
-  <li><a href="./01-HTTPGetPost/form_get.php">get form</a> </li>
-  <li><a href="./01-HTTPGetPost/form_post.php">post form</a> </li>
+  <li><a href="./01-HTTPGetPost/httpGetPost.php">01-HTTPGetPost</a>
+  <li><a href="./02-DesignPatterns/design_patterns.php">02-DesignPatterns</a></li>
+  <li><a href="./02-WebTechnologies/web_technologies.php">02-WebTechnologies</a></li>
 </ul> 
 
 
