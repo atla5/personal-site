@@ -57,23 +57,31 @@
                 <li><a href="#">Personal</a></li>
               </ul>
             </li>
+            
+            <!-- SWEN-344 -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                aria-haspopup="true" aria-expanded="false">SWEN-344<span class="caret">
+                </span></a>
+              <ul class="dropdown-menu">
+
+                <li><a href="/html/software/swen344/swen344.php"><b>SWEN-344 Home</b></a></li>
+
+                <li role="separator" class="divider" value="Homework Assignments"></li>
+                <li><a href="#">01-HTMLGetPost</a></li>
+                <li><a href="#">02-DesignPatterns</a></li>
+                <li><a href="#">02-WebTechnologies</a></li>
+              </ul>
+            </li>
 
             <!-- projects -->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                aria-haspopup="true" aria-expanded="false">Software<span class="caret">
+                aria-haspopup="true" aria-expanded="false">Projects<span class="caret">
                 </span></a>
               <ul class="dropdown-menu">
 
                 <li><a href="#"><b>Software</b></a></li>
-
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Amazon Web Services Migration</a></li>
-                <li><a href="#">Active Directory User Integration</a></li>
-                <li><a href="#">EMR Record Creation</a></li>
-
-                <li role="separator" class="divider"></li>
-                <li><a href="http://www.se.rit.edu/~aks5238/html/software/swen344/swen344.php">SWEN-344 Web Engineering</a></li>
 
                 <li role="separator" class="divider"></li>
                 <li><a href="#">personal-site</a></li>
@@ -81,8 +89,9 @@
                 <li><a href="#">JColorChanger</a></li>
               </ul>
             </li>
+            
 
-            <!-- papers -->
+            <!-- papers 
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                 aria-haspopup="true" aria-expanded="false">Philosophy<span class="caret">
@@ -99,13 +108,10 @@
                 <li><a href="#">Aesthetics</a></li>
               </ul>
             </li>
+            -->
 
-            <li>
-                <a href="https://www.librarything.com/catalog/aidan.keefe.s/yourlibrary" 
-                   target="_blank" >Library</a>
-            </li>
 
-            <li><a href="#">Blog</a></li>
+            <!-- <li><a href="#">Blog</a></li> -->
 
             <!-- <li><a href="#">Links</a></li> -->
 

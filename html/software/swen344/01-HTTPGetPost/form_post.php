@@ -76,7 +76,6 @@
       
       <input type="submit" value="Submit">
     </form>
-
   </body>
 
   <?php include_once '../../../../includes/footer.php' ?>
