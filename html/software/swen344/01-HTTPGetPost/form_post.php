@@ -1,6 +1,6 @@
 <html>
 
-  <?php include_once '../../../includes/header.php' ?>
+  <?php include_once '../../../../includes/header.php' ?>
 
   <script src="./loadStates.js"> </script>
 
@@ -76,8 +76,7 @@
       
       <input type="submit" value="Submit">
     </form>
-
   </body>
 
-  <?php include_once '../../../includes/footer.php' ?>
+  <?php include_once '../../../../includes/footer.php' ?>
 </html>

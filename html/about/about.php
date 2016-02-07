@@ -30,6 +30,13 @@
     to the organization, compilation, and propagation of the collected grand sum
     of human knowledge.
   </p>
+  
+  <p>
+    In my spare time I enjoy reading and buying books. I manage my library with 
+    <a href="https://www.librarything.com/" target="_blank">librarything</a>.
+    A link to my personal library is available <a href="https://www.librarything.com/catalog/aidan.keefe.s/yourlibrary" 
+                   target="_blank" >here</a>.
+  </p>
 
   <?php include_once '../../includes/footer.php' ?>
 
