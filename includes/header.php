@@ -68,9 +68,16 @@
                 <li><a href="http://www.se.rit.edu/~aks5238/html/software/swen344/swen344.php"><b>Web Engineering</b></a></li>
 
                 <li role="separator" class="divider" value="Homework Assignments"></li>
-                <li><a href="#">01-HTMLGetPost</a></li>
-                <li><a href="#">02-DesignPatterns</a></li>
-                <li><a href="#">02-WebTechnologies</a></li>
+                
+                <li><a href="http://www.se.rit.edu/~aks5238/html/software/swen344/01-HTTPGetPost/httpGetPost.php">
+                  01-HTMLGetPost</a>
+                </li>
+                <li><a href="http://www.se.rit.edu/~aks5238/html/software/swen344/02-DesignPatterns/design_patterns.php">
+                  02-DesignPatterns</a>
+                </li>
+                <li><a href="http://www.se.rit.edu/~aks5238/html/software/swen344/02-WebTechnologies/web_technologies.php">
+                  02-WebTechnologies</a>
+                </li>
               </ul>
             </li>
 
