@@ -49,7 +49,7 @@
                 aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
               <ul class="dropdown-menu">
 
-                <li><a href="./html/about/about.php"><b>About</b></a></li>
+                <li><a href="http://www.se.rit.edu/~aks5238/html/about/about.php"><b>About</b></a></li>
 
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Work Experience</a></li>
@@ -65,7 +65,7 @@
                 </span></a>
               <ul class="dropdown-menu">
 
-                <li><a href="http://www.se.rit.edu/~aks5238/html/software/swen344/swen344.php"><b>SWEN-344 Home</b></a></li>
+                <li><a href="http://www.se.rit.edu/~aks5238/html/software/swen344/swen344.php"><b>Web Engineering</b></a></li>
 
                 <li role="separator" class="divider" value="Homework Assignments"></li>
                 <li><a href="#">01-HTMLGetPost</a></li>
@@ -111,7 +111,7 @@
             -->
 
 
-            <!-- <li><a href="#">Blog</a></li> -->
+            <li><a href="#">Blog</a></li>
 
             <!-- <li><a href="#">Links</a></li> -->
 
