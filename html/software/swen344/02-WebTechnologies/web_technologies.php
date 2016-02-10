@@ -16,7 +16,7 @@
   <ul>
     <li><a href="https://secret-brook-98343.herokuapp.com/" target="_blank">Node</a></li>
     <li><a href="http://www.se.rit.edu/~aks5238/html/software/swen344/02-WebTechnologies/PHP/" target="_blank">PHP</a></li>
-    <li><a href="#">Rails</a></li>
+    <li><a href="https://thawing-plateau-12602.herokuapp.com/" target="_blank">Rails</a></li>
   </ul>
     
   <?php include_once "../../../../includes/footer.php" ?>
