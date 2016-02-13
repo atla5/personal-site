@@ -158,8 +158,6 @@
     return query;
   }
 
-}
-
 //-->
 </script>
 
