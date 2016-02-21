@@ -14,10 +14,11 @@
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     
     <?php 
-      for($i=1;i<=15;i++)
+      for($i=1;i<=15;i++){
         echo '<li data-target="#myCarousel" data-slide-to=';
         echo "$i"; 
         echo 'class="active"></li>';
+      }
     ?>
     
   </ol>
@@ -29,10 +30,11 @@
     </div>
 
     <?php 
-      for($i=1;i<=15;i++)
+      for($i=1;i<=15;i++){
         echo '<div class="item"> <img src="./DockerPresentationSlides/DockerPresentation(';
         echo "$i";
         echo ').png\"> </div>';
+      }
     ?>
 
   </div>
