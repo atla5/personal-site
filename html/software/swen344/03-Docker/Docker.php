@@ -15,7 +15,9 @@
     
     <?php 
       for($i=1;i<=15;i++)
-        echo "<li data-target=\"#myCarousel\" data-slide-to=\"$i\" class=\"active\"></li>";
+        echo '<li data-target="#myCarousel" data-slide-to=';
+        echo "$i"; 
+        echo 'class="active"></li>';
     ?>
     
   </ol>
@@ -28,7 +30,9 @@
 
     <?php 
       for($i=0;i<=15;i++)
-        echo "<div class=\"item\"> <img src=\"./DockerPresentationSlides/DockerPresentation ($i).png\"> </div>";
+        echo '<div class="item"> <img src="./DockerPresentationSlides/DockerPresentation (';
+        echo "$i";
+        echo ').png\"> </div>';
     ?>
 
   </div>
