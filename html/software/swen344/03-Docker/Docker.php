@@ -25,12 +25,12 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="img_chania.jpg">
+      <img src="./DockerPresentationSlides/DockerPresentation(0)">
     </div>
 
     <?php 
-      for($i=0;i<=15;i++)
-        echo '<div class="item"> <img src="./DockerPresentationSlides/DockerPresentation (';
+      for($i=1;i<=15;i++)
+        echo '<div class="item"> <img src="./DockerPresentationSlides/DockerPresentation(';
         echo "$i";
         echo ').png\"> </div>';
     ?>
