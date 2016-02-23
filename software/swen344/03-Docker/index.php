@@ -1,7 +1,7 @@
 <html>
   <title>Docker</title>
   
-  <?php include_once("../../../../includes/header.php"); ?>
+  <?php include_once("../../../includes/header.php"); ?>
   
   <h2>Docker</h2>
   <h3>Aidan Sawyer - atla5@dockerhub</h3>
@@ -52,5 +52,5 @@
   
   <!--insert links to references-->
   
-  <?php include_once("../../../../includes/footer.php"); ?>
+  <?php include_once("../../../includes/footer.php"); ?>
 </html>

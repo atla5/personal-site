@@ -8,7 +8,7 @@
       phone: 585.397.5491 |
       resume:
         <a href="http://www.se.rit.edu/~aks5238/res/pdf/resume.pdf" target="_blank">software</a>,
-        <a href="https://independent.academia.edu/AidanSawyer" target="_blank">philosophy</a>
+        <a href="https://rit.academia.edu/AidanSawyer" target="_blank">philosophy</a>
     </p>
   </div>
 </footer>

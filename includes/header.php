@@ -49,7 +49,7 @@
                 aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
               <ul class="dropdown-menu">
 
-                <li><a href="http://www.se.rit.edu/~aks5238/html/about/about.php"><b>About</b></a></li>
+                <li><a href="http://www.se.rit.edu/~aks5238/about/"><b>About</b></a></li>
 
                 <li role="separator" class="divider"></li>
                 <li><a href="#">Work Experience</a></li>
@@ -61,31 +61,24 @@
             <!-- SWEN-344 -->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                aria-haspopup="true" aria-expanded="false">SWEN-344<span class="caret">
-                </span></a>
+                aria-haspopup="true" aria-expanded="false">SWEN-344<span class="caret"></span></a>
               <ul class="dropdown-menu">
 
-                <li><a href="http://www.se.rit.edu/~aks5238/html/software/swen344/swen344.php"><b>Web Engineering</b></a></li>
+                <li><a href="http://www.se.rit.edu/~aks5238/software/swen344"><b>Web Engineering</b></a></li>
 
                 <li role="separator" class="divider" value="Homework Assignments"></li>
                 
-                <li><a href="http://www.se.rit.edu/~aks5238/html/software/swen344/01-HTTPGetPost/httpGetPost.php">
-                  01-HTMLGetPost</a>
-                </li>
-                <li><a href="http://www.se.rit.edu/~aks5238/html/software/swen344/02-DesignPatterns/design_patterns.php">
-                  02-DesignPatterns</a>
-                </li>
-                <li><a href="http://www.se.rit.edu/~aks5238/html/software/swen344/02-WebTechnologies/web_technologies.php">
-                  02-WebTechnologies</a>
-                </li>
+                <li><a href="http://www.se.rit.edu/~aks5238/software/swen344/01-HTTPGetPost/">01-HTMLGetPost</a></li>
+                <li><a href="http://www.se.rit.edu/~aks5238/software/swen344/02-DesignPatterns/">02-DesignPatterns</a></li>
+                <li><a href="http://www.se.rit.edu/~aks5238/software/swen344/02-WebTechnologies/">02-WebTechnologies</a></li>
+                <li><a href="http://www.se.rit.edu/~aks5238/software/swen344/03-Docker/">03-Docker</a></li>
               </ul>
             </li>
 
             <!-- projects -->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                aria-haspopup="true" aria-expanded="false">Projects<span class="caret">
-                </span></a>
+                aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
               <ul class="dropdown-menu">
 
                 <li><a href="#"><b>Software</b></a></li>

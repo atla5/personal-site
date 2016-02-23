@@ -2,7 +2,7 @@
 
   <title> aks5238 | HTTPGetPost </title>
 
-  <?php include_once '../../../../includes/header.php' ?>
+  <?php include_once '../../../includes/header.php' ?>
 
   <h1> SWEN 344 - Web Engineering </h1>
 
@@ -20,6 +20,6 @@
   </ul> 
   
   
-  <?php include_once '../../../../includes/footer.php' ?>
+  <?php include_once '../../../includes/footer.php' ?>
 
 </html>
