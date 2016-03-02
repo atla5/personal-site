@@ -2,9 +2,9 @@
 
 <?php include_once './includes/header.php' ?>
 
-<body>
-  Welcome to the site!
-</body>
+<div id="content">
+    Hello World!
+</div>
 
 <?php include_once './includes/footer.php' ?>
 
