@@ -1,9 +1,9 @@
 <html>
 
 <!-- footer -->
-<footer class="footer">
+<div id="footer" class="container-fluid">
   <div class="container">
-    <p class="text-muted"> Created in 2015 by Aidan Sawyer |
+    <p class="text-muted"> Created 2015 by Aidan Sawyer |
       email: aks5238@rit.edu |
       phone: 585.397.5491 |
       resume:
