@@ -1,3 +1,3 @@
-# site
+# personal site #
 
-Hosted with RIT at http://www.se.rit.edu/~aks5238/.
+hosted by GitHub at [atla5.github.io](atla5.github.io)
