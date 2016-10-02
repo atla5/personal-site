@@ -1,5 +1,5 @@
 
-
+/* load given 'page' into the main_content section */
 function loadContent(page){
 
   // - set defoult values for the files we want to load - //
@@ -24,4 +24,13 @@ function loadContent(page){
   $(document.ready(function(){
     $('#main_content').load(content);
   }));
+}
+
+/* load header, navbar, and footer from include files */
+function initializeStaticElements(){
+  $(document.ready(function(){
+    $('#main_imports').load('includes/header.html');
+    $('#main_navbar').load('includes/navbar.html');
+    $('#main_footer').load('includes/footer.html');
+  }))
 }
