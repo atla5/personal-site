@@ -22,16 +22,22 @@ function loadContent(){
   // - set these content
   switch(page){
     case "about":
-      content = "pages/about.html";
+      content = "/includes/under-construction.html";  //"pages/about.html";
       break;
     case "project_detail":
-      content = "pages/project_detail.html";
+      content = "/pages/project_detail.html";
       break;
     case "projects":
-      content = "pages/parjects.html";
+      content = "/pages/projects.html";
+      break;
+    case "feeds":
+      content = "/includes/under-construction.html"; //"pages/feeds.html";
+      break;
+    case "blog":
+      content = "/includes/under-construction.html"; //"pages/blog.html";
       break;
     default:
-      content = "pages/home.html";
+      content = "/pages/home.html";
   }
 
   //load selected content into #content section of index.html
