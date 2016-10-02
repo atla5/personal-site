@@ -1,9 +1,23 @@
+/* get 'page' variable from url  note: FROM css-tricks.com */
+function getParameterValueFromURL(string)
+{
+     var query = window.location.search.substring(1);
+     var vars = query.split("&");
+     for (var i=0;i<vars.length;i++) {
+             var pair = vars[i].split("=");
+             if(pair[0] == string){return pair[1];}
+     }
+     return(false);
+}
+
 /* load given 'page' into the main_content section */
-function loadContent(page){
+function loadContent(){
+
+  // -
+  var page = getParameterValueFromURL('page');
 
   // - set defoult values for the files we want to load - //
-  var content = "";
-  var leftPane = "";
+  var content = ""; //, leftPane = "";
 
   // - set these content
   switch(page){
