@@ -16,7 +16,10 @@
 
     <!-- script to call this code and initialize page 'onload'-->
     <script type="text/javascript">
-      window.onload = initializeStaticElements
+      window.onload = function(){
+        initializeStaticElements();
+        loadContent("home");
+      }
     </script>
 
   </head>

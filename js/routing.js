@@ -1,23 +1,23 @@
-
 /* load given 'page' into the main_content section */
 function loadContent(page){
 
   // - set defoult values for the files we want to load - //
-  content, leftPane = "";
+  var content = "";
+  var leftPane = "";
 
   // - set these content
   switch(page){
     case "about":
-      content = "pages/about.html"
+      content = "pages/about.html";
       break;
     case "project_detail":
-      content = "pages/project_detail.html"
+      content = "pages/project_detail.html";
       break;
     case "projects":
-      content = "pages/parjects.html"
+      content = "pages/parjects.html";
       break;
     default:
-      content = "pages/home.html"
+      content = "pages/home.html";
   }
 
   //load selected content into #content section of index.html
@@ -34,7 +34,7 @@ function initializeStaticElements(){
   $(document).ready(function(){
     $('#main_navbar').load('includes/navbar.html');
     $('#main_footer').load('includes/footer.html');
-  }));
+  });
 
   console.log("static elements initialized.");
 }
