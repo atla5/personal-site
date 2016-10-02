@@ -21,9 +21,9 @@ function loadContent(page){
   }
 
   //load selected content into #content section of index.html
-  $(document.ready(function(){
+  $(document).ready(function(){
     $('#main_content').load(content);
-  }));
+  });
 }
 
 /* load header, navbar, and footer from include files */
