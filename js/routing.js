@@ -29,12 +29,12 @@ function loadContent(page){
 /* load header, navbar, and footer from include files */
 function initializeStaticElements(){
 
-  console.log("initializing static elements...")
+  console.log("initializing static elements...");
 
-  $(document.ready(function(){
+  $(document).ready(function(){
     $('#main_navbar').load('includes/navbar.html');
     $('#main_footer').load('includes/footer.html');
-  }))
+  }));
 
-  console.log("static elements initialized.")
+  console.log("static elements initialized.");
 }
