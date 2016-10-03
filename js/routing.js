@@ -25,7 +25,7 @@ function loadContent(){
       content = "includes/under-construction.html";  //"pages/about.html";
       break;
     case "project_detail":
-      content = "pages/project_detail.html";
+      content = "pages/project-detail.html";
       break;
     case "projects":
       content = "pages/projects.html";
