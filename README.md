@@ -72,7 +72,7 @@ representation of the current state of the site_
 
 |page|description|
 |:--|:---------|
-|home|welcome, introduction, and worklog ([tracking time](https://trackingtime.co/)?)|
+|home|welcome, introduction, and worklog|
 |about|Interactive resume for employers displaying data from [atla5/resume](https://github.com/atla5/resume/)|
 |projects|pageinated list of projects with descriptions stored in [projects.json](https://github.com/atla5/resume/blob/master/projects.json)|
 |blog|list of my writing pulled from [atla5/blog](https://github.com/atla5/blog)|
