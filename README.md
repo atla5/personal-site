@@ -15,7 +15,8 @@ This site was made as:
 A huge motivating design concept I implemented in the design of this website (and a central tenant of 
   my general design philosophy) was the principle of the 
   '[separation of concerns](https://effectivesoftwaredesign.com/2012/02/05/separation-of-concerns/)'
-  (also known as 'functional decomposition' and linked closely with the 'unix philosophy').
+  (also known as 'functional decomposition', or '[single responsibility](http://www.oodesign.com/single-responsibility-principle.html)'
+  and linked closely with the 'unix philosophy').
   
 This drive to reduce higher-order requirements into sub-systems and components helped to make the codebase more:
 - understandable
