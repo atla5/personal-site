@@ -1,0 +1,154 @@
+{ 
+  "feeds" : [
+    {
+      "name": "Lost in the Stacks",
+      "tags": [
+        "libary science",
+        "podcast",
+        "music"
+        ],
+      "url":"http://www.wrek.org/category/lostinthestacks/feed/"
+    },
+    {
+      "name": "Cataloging Matters",
+      "tags": [
+        "libary science",
+        "podcast",
+        "metadata"
+        ],
+      "url": "http://blog.jweinheimer.net/feed"
+    },
+    {
+      "name": "Thingology",
+      "tags": [
+        "libary science",
+        "blog",
+        "careers"
+        ],
+      "url":"http://blog.librarything.com/thingology/feed/atom/"
+    },
+    {
+      "name": "JISC Digital Media",
+      "tags": [
+        "libary science",
+        "metadata"
+        ],
+      "url":"http://www.jiscdigitalmedia.ac.uk/guide/rss/"
+    },
+    {
+      "name": "Dublin Core",
+      "tags": [
+        "libary science",
+        ],
+      "url":"http://dublincore.org/news.rss"
+    },
+    {
+      "name": "Linked Data (W3C)",
+      "tags": [
+        "libary science",
+        "metadata",
+        "documentation"
+        ],
+      "url":"http://www.wrek.org/category/lostinthestacks/feed/"
+    },
+    {
+      "name": "Partially Examined Life",
+      "tags": [
+        "philosophy",
+        "podcast"
+        ],
+      "url":"http://feeds.feedburner.com/partiallyexaminedlife/blog?fmt=xml"
+    },
+    {
+      "name": "Internet Encyclopedia of Philosophy",
+      "tags": [
+        "philosophy",
+        "encyclopedia",
+        "articles"
+        ],
+      "url":"http://www.iep.utm.edu/feed/"
+    },
+    {
+      "name": "Daily Nous",
+      "tags": [
+        "philosophy",
+        "news",
+        "blog"
+        ],
+      "url":"http://dailynous.com/feed/"
+    },
+    {
+      "name": "Peikoff Podcast",
+      "tags": [
+        "philosophy",
+        "podcast",
+        "objectivism"
+        ],
+      "url":"http://recordings.talkshoe.com/rss15215.xml"
+    },
+    {
+      "name": "Yaron Brook Podcast",
+      "tags": ["philosophy","objectivism","politics","podcast"],
+      "url": "http://www.blogtalkradio.com/yaronbrook/podcast"
+    }
+    {
+      "name": "The Objectivism Seminar",
+      "tags": [
+        "philosophy",
+        "podcast",
+        "objectivism"
+        ],
+      "url":"http://recordings.talkshoe.com/rss15215.xml"
+    },
+    {
+      "name": "SpaceX",
+      "tags": [
+        "science",
+        "space",
+        "news"
+        ],
+      "url":"http://www.spacex.com/news.xml"
+    },
+    {
+      "name": "Rider Institute (DRACO)",
+      "tags": [
+        "science",
+        "blog",
+        "research"
+        ],
+      "url":"https://riderinstitute.org/blogs/news.atom"
+    },
+    {
+      "name": "Vice News",
+      "tags": [
+        "news",
+        "politics"
+        ],
+      "url":"https://news.vice.com/rss"
+    },
+    {
+      "name": "Reason Magazine",
+      "tags": [
+        "articles",
+        "news",
+        "politics"
+        ],
+      "url":"http://feeds.feedburner.com/reason/Articles"
+    },
+    {
+      "name": "NPR Politics",
+      "tags": [
+        "politics",
+        "news"
+        ],
+      "url":"http://www.npr.org/rss/rss.php?id=1001"
+    },
+    {
+      "name": "ESPN-NHL",
+      "tags": [
+        "sports"
+        ],
+      "url":"http://espn.go.com/espn/rss/nhl/news"
+    },
+  ]
+}
