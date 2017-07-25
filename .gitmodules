@@ -1,0 +1,3 @@
+[submodule "res/resume"]
+	path = res/resume
+	url = https://github.com/atla5/resume.git
