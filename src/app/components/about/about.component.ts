@@ -25,13 +25,7 @@ export class AboutComponent implements OnInit {
     academia_edu:string
   };
   github:string[] = ["",""];
-  school:{
-    name:string,
-    degree:string,
-    start:string,
-    end:string,
-    notes:string[]
-  };
+  schools:School[];
   jobs: Job[];
   projects:Project[];
   skills: {
@@ -39,7 +33,6 @@ export class AboutComponent implements OnInit {
     functional:string[],
     novice:string[]
   };
-
 
   constructor(private resumeService:ResumeService) {}
 
@@ -61,24 +54,17 @@ export class AboutComponent implements OnInit {
       academia_edu: "AidanSawyer"
     };
     this.website = "https://" + this.accounts.github + ".github.io";
-    this.school = {
-      name: "Rochester Institute of Technology",
-      degree: "BS in Software Engineering",
-      start: "Aug 2012",
-      end: "Aug 2018",
-      notes: [
-        "Minor in Philosophy, Application Domain in 'Library and Information Science'",
-        "Worked on over a dozen 2-6 person teams, in as many languages/technologies, in the completion of project-heavy coursework, punctuated by meaningful work experience."
-      ]
-    };
     this.skills = {
       intermediate:["java","python","html"],
       functional:["scss","C#","C"],
       novice:["js","AWS"]
     };
 
+    this.resumeService.getSchools().subscribe( (_schools:School[]) => {
+      this.schools = _schools;
+    });
+
     this.resumeService.getProjects().subscribe((_projects) => {
-      console.log(_projects);
       this.projects = _projects;
     });
 
@@ -110,4 +96,13 @@ interface Job {
   time_end:string,
   position:string,
   responsibilities:string[]
+}
+
+interface School {
+  school_name:string,
+  degree:string,
+  major:string,
+  time_start:string,
+  time_end:string,
+  notes:string[]
 }

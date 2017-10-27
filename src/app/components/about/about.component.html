@@ -26,12 +26,16 @@
 
 <div id="education">
   <h2>Education</h2><hr />
-  <div>
-    <span class="underline">{{school.name}}</span>:  {{school.degree}}
-    <em class="right">{{school.start}} - {{school.end}}</em>
-  </div>
   <ul>
-    <li *ngFor="let note of school.notes">{{note}}</li>
+    <li *ngFor="let school of schools | slice:0:1">
+      <div>
+        <span class="underline">{{school.school_name}}</span>:  {{school.degree}} in {{school.major}}
+        <em class="right">{{school.time_start}} - {{school.time_end}}</em>
+      </div>
+      <ul>
+        <li *ngFor="let note of school['notes']">{{note}}</li>
+      </ul>
+    </li>
   </ul>
 </div>
 

@@ -5,8 +5,10 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ResumeService {
 
-  ENDPOINT_EXPERIENCE:string = "https://raw.githubusercontent.com/atla5/resume/master/experience.json";
-  ENDPOINT_PROJECTS:string = "https://raw.githubusercontent.com/atla5/resume/master/projects.json";
+  private base_service_endpoint:string  = "https://raw.githubusercontent.com/atla5/resume/master/";
+  private ENDPOINT_EDUCATION:string     = this.base_service_endpoint + "education.json";
+  private ENDPOINT_EXPERIENCE:string    = this.base_service_endpoint + "experience.json";
+  private ENDPOINT_PROJECTS:string      = this.base_service_endpoint + "projects.json";
 
   constructor(public http:Http) {
     console.log("ResumeService loaded...")
@@ -23,6 +25,10 @@ export class ResumeService {
 
   getProjects(){
     return this.getJSONDataFromEndpoint(this.ENDPOINT_PROJECTS);
+  }
+
+  getSchools(){
+    return this.getJSONDataFromEndpoint(this.ENDPOINT_EDUCATION);
   }
 
   public resume_download_url:string = "https://github.com/atla5/resume/raw/master/build/Resume_Sawyer.pdf";
