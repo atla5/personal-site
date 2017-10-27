@@ -41,7 +41,7 @@
     <li *ngFor="let job of jobs">
       <div>
         <strong><span class="underline">{{job.company_name}}</span>: {{job.position}}</strong>
-        <span class="right">{{job.time_start}} - {{job.time_end}}</span>
+        <em class="right">{{job.time_start}} - {{job.time_end}}</em>
       </div>
       <div>
         <em>{{job.advisor.name}} - {{job.advisor.position}} - {{job.advisor.email}}</em>
