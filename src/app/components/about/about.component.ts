@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectsService } from "../../services/projects.service";
+import { ResumeService } from "../../services/resume";
 
 @Component({
   selector: 'app-about',
@@ -57,7 +57,7 @@ export class AboutComponent implements OnInit {
   };
 
 
-  constructor(private projectService:ProjectsService) {}
+  constructor(private resumeService:ResumeService) {}
 
   ngOnInit() {
     console.log("initializing 'about' component");
@@ -116,9 +116,9 @@ export class AboutComponent implements OnInit {
       novice:["js","AWS"]
     };
 
-    this.projectService.getProjects().subscribe((projects_from_projectService) => {
-      console.log(projects_from_projectService);
-      this.projects = projects_from_projectService;
+    this.resumeService.getProjects().subscribe((_projects) => {
+      console.log(_projects);
+      this.projects = _projects;
     });
   }
 }

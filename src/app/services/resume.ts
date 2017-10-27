@@ -3,12 +3,12 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class ProjectsService {
+export class ResumeService {
 
   PROJECTS_ENDPOINT:string = "https://raw.githubusercontent.com/atla5/resume/master/projects.json";
 
   constructor(public http:Http) {
-    console.log("ProjectsService loaded...")
+    console.log("ResumeService loaded...")
   }
 
   getProjects(){

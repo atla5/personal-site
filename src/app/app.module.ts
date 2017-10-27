@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 
-import { ProjectsService } from "./services/projects.service";
+import { ResumeService } from "./services/resume";
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { ProjectsService } from "./services/projects.service";
     HttpModule
   ],
   providers: [
-    ProjectsService
+    ResumeService
   ],
   bootstrap: [AppComponent]
 })
