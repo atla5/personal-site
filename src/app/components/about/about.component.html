@@ -54,7 +54,7 @@
   <h2>Projects</h2><hr />
   <ul>
     <li *ngFor="let project of projects">
-      <strong>{{project.name}}</strong>
+      <strong><a href="{{project.url_src}}">{{project.name}}</a></strong>
       <span class="right">{{project.description_short}}</span>
     </li>
   </ul>

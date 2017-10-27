@@ -13,3 +13,7 @@ h2 {
 .right {
   float: right;
 }
+
+tr {
+  padding-bottom: 1em;
+}
