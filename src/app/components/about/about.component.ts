@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectsService } from "../../services/projects.service";
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
+
 export class AboutComponent implements OnInit {
   name:string;
   url_resume_download:string;
@@ -47,12 +49,7 @@ export class AboutComponent implements OnInit {
     position:string,
     responsibilities:string[],
   }[];
-  projects: {
-    name:string,
-    url_src:string,
-    description_short:string,
-    description_long:string
-  }[];
+  projects:Project[];
   skills: {
     intermediate:string[],
     functional:string[],
@@ -60,7 +57,7 @@ export class AboutComponent implements OnInit {
   };
 
 
-  constructor() { }
+  constructor(private projectService:ProjectsService) {}
 
   ngOnInit() {
     console.log("initializing 'about' component");
@@ -113,18 +110,23 @@ export class AboutComponent implements OnInit {
         ]
       }
     ];
-    this.projects = [
-      {
-        name:"dublin-core-text-parser",
-        url_src:"https://github.com/atla5/dublin-core-text-parser",
-        description_short:"Easily encode dublin core metadata and convert into various formats.",
-        description_long:"Assist in cataloguing batches of similar or series-based items from a collection by: decreasing the complexity of logging each individual item/issue, minimizing repetitive typing and template editing, and combining the information that is shared across items in a collection in one place"
-      }
-    ];
     this.skills = {
       intermediate:["java","python","html"],
       functional:["scss","C#","C"],
       novice:["js","AWS"]
-    }
+    };
+
+    this.projectService.getProjects().subscribe((projects_from_projectService) => {
+      console.log(projects_from_projectService);
+      this.projects = projects_from_projectService;
+    });
   }
+}
+
+
+interface Project {
+  name:string,
+  url_src:string,
+  description_short:string,
+  description_long:string,
 }
