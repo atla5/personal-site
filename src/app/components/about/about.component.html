@@ -15,7 +15,8 @@
   </div>
   <br />
   <form method="get" action="{{url_resume_download}}">
-    <button type="submit">Download Resume</button>
+    <button type="submit" class="phm">Download Resume</button>
+    <span class="phm"><a href="/projects" class="phm">Browse Projects</a></span>
   </form>
 </div>
 
@@ -48,7 +49,7 @@
         <em class="right">{{job.time_start}} - {{job.time_end}}</em>
       </div>
       <div>
-        <em>{{job.advisor_name}} - {{job.advisor_position}} - {{job.advisor_contact}}</em>
+        <em>{{job.advisor_name}} - {{job.advisor_position}} - <a href="mailto:{{job.advisor_contact}}">{{job.advisor_contact}}</a></em>
         <ul>
           <li *ngFor="let note of job.responsibilities">{{note}}</li>
         </ul>
