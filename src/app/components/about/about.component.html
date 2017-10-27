@@ -1,0 +1,79 @@
+<h1>{{name}}</h1>
+
+<div class="intro">
+  <div>
+    <strong>phone</strong>:  <a href="tel:{{contact.phone}}">{{contact.phone}}</a> <>
+    <strong>email</strong>: <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+  </div>
+  <div>
+    <strong>github</strong>:
+    <span>
+      <a href="https://github.com/{{accounts.github}}" target="_blank">{{accounts.github}}</a> -
+      <a href="https://github.com/{{accounts.github_org}}" target="_blank">{{accounts.github_org}}</a> <>
+    </span>
+    <strong>website</strong>: <a href="{{website}}" target="_blank">{{website}}</a>
+  </div>
+</div>
+
+<div id="objective">
+  <h2>Objective</h2><hr />
+  <p>{{objective}}</p>
+</div>
+
+<div id="education">
+  <h2>Education</h2><hr />
+  <div>
+    <span class="underline">{{school.name}}</span>:  {{school.degree}}
+    <em class="right">{{school.start}} - {{school.end}}</em>
+  </div>
+  <ul>
+    <li *ngFor="let note of school.notes">{{note}}</li>
+  </ul>
+</div>
+
+<div id="experience">
+  <h2>Experience</h2><hr />
+  <ul>
+    <li *ngFor="let job of jobs">
+      <div>
+        <strong><span class="underline">{{job.company_name}}</span>: {{job.position}}</strong>
+        <span class="right">{{job.time_start}} - {{job.time_end}}</span>
+      </div>
+      <div>
+        <em>{{job.advisor.name}} - {{job.advisor.position}} - {{job.advisor.email}}</em>
+        <ul>
+          <li *ngFor="let note of job.responsibilities">{{note}}</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  <br />
+</div>
+
+<div id="projects">
+  <h2>Projects</h2><hr />
+  <ul>
+    <li *ngFor="let project of projects">
+      <strong>{{project.name}}</strong>
+      <span class="right">{{project.description_short}}</span>
+    </li>
+  </ul>
+</div>
+
+<div id="skills">
+  <h2>Languages and Technologies</h2><hr />
+  <table>
+    <tr>
+      <td><strong>Intermediate</strong></td>
+      <td>{{skills.intermediate}}</td>
+    </tr>
+    <tr>
+      <td><strong>Functional</strong></td>
+      <td>{{skills.functional}}</td>
+    </tr>
+    <tr>
+      <td><strong>Novice</strong></td>
+      <td>{{skills.novice}}</td>
+    </tr>
+  </table>
+</div>

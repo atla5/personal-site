@@ -1,0 +1,15 @@
+h1, .intro {
+  text-align: center;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.right {
+  float: right;
+}
