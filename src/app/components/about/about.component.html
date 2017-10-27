@@ -38,13 +38,13 @@
 <div id="experience">
   <h2>Experience</h2><hr />
   <ul>
-    <li *ngFor="let job of jobs">
+    <li *ngFor="let job of jobs | slice:0:3" class="pbl">
       <div>
         <strong><span class="underline">{{job.company_name}}</span>: {{job.position}}</strong>
         <em class="right">{{job.time_start}} - {{job.time_end}}</em>
       </div>
       <div>
-        <em>{{job.advisor.name}} - {{job.advisor.position}} - {{job.advisor.email}}</em>
+        <em>{{job.advisor_name}} - {{job.advisor_position}} - {{job.advisor_contact}}</em>
         <ul>
           <li *ngFor="let note of job.responsibilities">{{note}}</li>
         </ul>

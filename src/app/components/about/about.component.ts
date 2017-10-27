@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ResumeService } from "../../services/resume";
+import { ResumeService } from "../../services/resume.service";
 
 @Component({
   selector: 'app-about',
@@ -32,23 +32,7 @@ export class AboutComponent implements OnInit {
     end:string,
     notes:string[]
   };
-  jobs: {
-    company_name:string,
-    company_url:string,
-    company_location:{
-      city:string,
-      state:string
-    },
-    advisor:{
-      name:string,
-      email:string,
-      position:string
-    },
-    time_start:string,
-    time_end:string,
-    position:string,
-    responsibilities:string[],
-  }[];
+  jobs: Job[];
   projects:Project[];
   skills: {
     intermediate:string[],
@@ -77,7 +61,6 @@ export class AboutComponent implements OnInit {
       academia_edu: "AidanSawyer"
     };
     this.website = "https://" + this.accounts.github + ".github.io";
-    this.url_resume_download = "https://github.com/atla5/resume/raw/master/build/Resume_Sawyer.pdf";
     this.school = {
       name: "Rochester Institute of Technology",
       degree: "BS in Software Engineering",
@@ -88,28 +71,6 @@ export class AboutComponent implements OnInit {
         "Worked on over a dozen 2-6 person teams, in as many languages/technologies, in the completion of project-heavy coursework, punctuated by meaningful work experience."
       ]
     };
-    this.jobs = [
-      {
-        company_name: "ITHAKA - JSTOR",
-        company_url: "http://ithaka.org",
-        company_location: {
-          city: "Ann Arbor",
-          state: "MI"
-        },
-        advisor: {
-          name: "Peter Vlahakis",
-          email: "peter.vlahakis@ithaka.org",
-          position: "Product Owner"
-        },
-        time_start: "Jan 2017",
-        time_end: "Dec 2018",
-        position: "Software Development Intern",
-        responsibilities: [
-          "Built, maintained, monitored, and improved upon a series of django applications constituting the new JSTOR 'For Librarians' portal within an agile, distributed, continuous deployment AWS environment.",
-          "Took part in a distributed effort among front-end teams toward a site-wide visual redesign."
-        ]
-      }
-    ];
     this.skills = {
       intermediate:["java","python","html"],
       functional:["scss","C#","C"],
@@ -120,6 +81,12 @@ export class AboutComponent implements OnInit {
       console.log(_projects);
       this.projects = _projects;
     });
+
+    this.resumeService.getJobs().subscribe( (_jobs) => {
+      this.jobs = _jobs;
+    });
+
+    this.url_resume_download = this.resumeService.resume_download_url;
   }
 }
 
@@ -129,4 +96,18 @@ interface Project {
   url_src:string,
   description_short:string,
   description_long:string,
+}
+
+interface Job {
+  company_name:string,
+  company_url:string,
+  location_city:string,
+  location_state:string,
+  advisor_name:string,
+  advisor_contact:string,
+  advisor_position:string,
+  time_start:string,
+  time_end:string,
+  position:string,
+  responsibilities:string[]
 }

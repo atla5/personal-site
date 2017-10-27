@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { ResumeService } from './resume';
+import { ResumeService } from './resume.service';
 
 describe('ResumeService', () => {
   beforeEach(() => {

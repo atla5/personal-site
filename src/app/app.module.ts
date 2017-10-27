@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 
-import { ResumeService } from "./services/resume";
+import { ResumeService } from "./services/resume.service";
 
 @NgModule({
   declarations: [
