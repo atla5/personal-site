@@ -2,3 +2,16 @@
 body {
   margin: 5% 10%;
 }
+
+.phm {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.pbs {
+  padding-bottom: 5px;
+}
+
+.pts {
+  padding-top: 5px;
+}

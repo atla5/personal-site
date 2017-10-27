@@ -1,11 +1,11 @@
 <h1>{{name}}</h1>
 
 <div class="intro">
-  <div>
+  <div class="pbs">
     <strong>phone</strong>:  <a href="tel:{{contact.phone}}">{{contact.phone}}</a> <>
     <strong>email</strong>: <a href="mailto:{{contact.email}}">{{contact.email}}</a>
   </div>
-  <div>
+  <div class="pbs">
     <strong>github</strong>:
     <span>
       <a href="https://github.com/{{accounts.github}}" target="_blank">{{accounts.github}}</a> -
@@ -13,6 +13,10 @@
     </span>
     <strong>website</strong>: <a href="{{website}}" target="_blank">{{website}}</a>
   </div>
+  <br />
+  <form method="get" action="{{url_resume_download}}">
+    <button type="submit">Download Resume</button>
+  </form>
 </div>
 
 <div id="objective">

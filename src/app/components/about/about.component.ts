@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
   name:string;
+  url_resume_download:string;
   objective:string;
   contact: {
     phone:string,
@@ -65,7 +66,7 @@ export class AboutComponent implements OnInit {
     console.log("initializing 'about' component");
 
     this.name = "Aidan Sawyer";
-    this.objective = "\"I'm looking for meaningful work involved with the organization, preservation, and expansion of knowledge, with particular regard to library resources and scientific research. By improving the engines which power human understanding, I seek to expedite human progress long-term.";
+    this.objective = "I'm looking for meaningful work involved with the organization, preservation, and expansion of knowledge, with particular regard to library resources and scientific research. By improving the engines which power human understanding, I seek to expedite human progress long-term.";
     this.contact = {
       phone: "207.200.6026",
       email: "aks5238@rit.edu"
@@ -79,6 +80,7 @@ export class AboutComponent implements OnInit {
       academia_edu: "AidanSawyer"
     };
     this.website = "https://" + this.accounts.github + ".github.io";
+    this.url_resume_download = "https://github.com/atla5/resume/raw/master/build/Resume_Sawyer.pdf";
     this.school = {
       name: "Rochester Institute of Technology",
       degree: "BS in Software Engineering",
