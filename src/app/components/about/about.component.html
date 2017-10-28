@@ -1,8 +1,24 @@
+<h1>{{name}}</h1>
 
-<form method="get" class="intro" action="{{url_resume_download}}">
-  <button type="submit" class="phm">Download Resume</button>
-  <span class="phm"><a href="/projects" class="phm">Browse Projects</a></span>
-</form>
+<div class="intro">
+  <div class="pbs">
+    <strong>phone</strong>:  <a href="tel:{{contact.phone}}">{{contact.phone}}</a> <>
+    <strong>email</strong>: <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+  </div>
+  <div class="pbs">
+    <strong>github</strong>:
+    <span>
+      <a href="https://github.com/{{accounts.github}}" target="_blank">{{accounts.github}}</a> -
+      <a href="https://github.com/{{accounts.github_org}}" target="_blank">{{accounts.github_org}}</a> <>
+    </span>
+    <strong>website</strong>: <a href="{{website}}" target="_blank">{{website}}</a>
+  </div>
+  <br />
+  <form method="get" action="{{url_resume_download}}">
+    <button type="submit" class="phm">Download Resume</button>
+    <span class="phm"><a href="/projects" class="phm">Browse Projects</a></span>
+  </form>
+</div>
 
 <div id="objective">
   <h2>Objective</h2><hr />
