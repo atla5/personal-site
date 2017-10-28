@@ -40,7 +40,7 @@ export class AboutComponent implements OnInit {
     console.log("initializing 'about' component");
 
     this.name = "Aidan Sawyer";
-    this.objective = "I'm looking for meaningful work involved with the organization, preservation, and expansion of knowledge, with particular regard to library resources and scientific research. By improving the engines which power human understanding, I seek to expedite human progress long-term.";
+    this.objective = "I'm looking for meaningful work involved with the organization, preservation, and expansion of knowledge, with particular regard to library resources and scientific research.";
     this.contact = {
       phone: "207.200.6026",
       email: "aks5238@rit.edu"
@@ -53,7 +53,6 @@ export class AboutComponent implements OnInit {
       twitter: "Aidan_KS",
       academia_edu: "AidanSawyer"
     };
-    this.website = "https://" + this.accounts.github + ".github.io";
     this.skills = {
       intermediate:["java","python","html"],
       functional:["scss","C#","C"],

@@ -1,28 +1,27 @@
-<h1>{{name}}</h1>
-
-<div class="intro">
-  <div class="pbs">
-    <strong>phone</strong>:  <a href="tel:{{contact.phone}}">{{contact.phone}}</a> <>
-    <strong>email</strong>: <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+<div class="jumbotron">
+  <div class="row container">
+    <div class="col-xs-5 col-sm-3 col-md-2">
+      <img src="https://www.gravatar.com/avatar/8e67c47b0cabcd345fa551c6599a78e5?s=115" style="border-radius: 10px">
+    </div>
+    <div class="col-xs-7 col-sm-8 col-md-3 pll">
+      <span class="lead">{{name}}</span>
+      <ul class="list-unstyled">
+        <li><strong>phone</strong>: <a href="tel:{{contact.phone}}">{{contact.phone}}</a></li>
+        <li><strong>email</strong>: <a href="mailto:{{contact.email}}">{{contact.email}}</a></li>
+        <li>
+          <strong>github</strong>:
+          <span>
+            <a href="https://github.com/{{accounts.github}}" target="_blank">{{accounts.github}}</a> -
+            <a href="https://github.com/{{accounts.github_org}}" target="_blank">{{accounts.github_org}}</a>
+          </span>
+        </li>
+        <li class="pts"><a class="btn btn-default btn-sm" href="{{url_resume_download}}">Download Resume</a></li>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-md-7 pts">
+      <p>{{objective}}</p>
+    </div>
   </div>
-  <div class="pbs">
-    <strong>github</strong>:
-    <span>
-      <a href="https://github.com/{{accounts.github}}" target="_blank">{{accounts.github}}</a> -
-      <a href="https://github.com/{{accounts.github_org}}" target="_blank">{{accounts.github_org}}</a> <>
-    </span>
-    <strong>website</strong>: <a href="{{website}}" target="_blank">{{website}}</a>
-  </div>
-  <br />
-  <form method="get" action="{{url_resume_download}}">
-    <button type="submit" class="phm">Download Resume</button>
-    <span class="phm"><a href="/projects" class="phm">Browse Projects</a></span>
-  </form>
-</div>
-
-<div id="objective">
-  <h2>Objective</h2><hr />
-  <p>{{objective}}</p>
 </div>
 
 <div id="education">
@@ -38,6 +37,7 @@
       </ul>
     </li>
   </ul>
+  <br />
 </div>
 
 <div id="experience">
@@ -67,6 +67,7 @@
       <span class="right">{{project.description_short}}</span>
     </li>
   </ul>
+  <br />
 </div>
 
 <div id="skills">
@@ -74,15 +75,15 @@
   <table>
     <tr>
       <td><strong>Intermediate</strong></td>
-      <td>{{skills.intermediate}}</td>
+      <td class="pll">{{skills.intermediate}}</td>
     </tr>
     <tr>
       <td><strong>Functional</strong></td>
-      <td>{{skills.functional}}</td>
+      <td class="pll">{{skills.functional}}</td>
     </tr>
     <tr>
       <td><strong>Novice</strong></td>
-      <td>{{skills.novice}}</td>
+      <td class="pll">{{skills.novice}}</td>
     </tr>
   </table>
 </div>

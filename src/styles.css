@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  margin: 0 10%;
+  margin: 0 5%;
 }
 
 .phm {
@@ -10,6 +10,10 @@ body {
 
 .pls {
   padding-left: 5px;
+}
+
+.pll {
+  padding-left: 15px;
 }
 
 .pbs {
