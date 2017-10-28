@@ -1,18 +1,56 @@
-<nav class="intro">
-  <h1>{{name}}</h1>
-    <div class="pbs">
-      <strong>phone</strong>:  <a href="tel:{{contact.phone}}">{{contact.phone}}</a> <>
-      <strong>email</strong>: <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed"
+              data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false">
+
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+
+      </button>
+
+      <a class="navbar-brand" href="/" id="nav_name" >Aidan Sawyer</a>
     </div>
-    <div class="pbs">
-      <strong>github</strong>:
-      <span>
-      <a href="https://github.com/{{accounts.github}}" target="_blank">{{accounts.github}}</a> -
-      <a href="https://github.com/{{accounts.github_org}}" target="_blank">{{accounts.github_org}}</a> <>
-    </span>
-      <strong>website</strong>: <a href="{{website}}" target="_blank">{{website}}</a>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="?page=home">Home<span class="sr-only">(current)</span></a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+
+      <!--form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" id="tfSearch" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default" disabled onclick="alert(search);">Submit</button>
+      </form-->
+
     </div>
-    <br />
+  </div>
 </nav>
 
-<router-outlet></router-outlet>
+<div id="main-body">
+  <router-outlet></router-outlet>
+</div>
+
+<br />
+
+<footer class="mvm">
+  <div class="container center">
+    <span class="text-muted">
+      Created in 2017 by Aidan Sawyer
+        (<a href="https://github.com/{{accounts.github}}">{{accounts.github}}</a> | <a href="https://github.com/{{accounts.github_org}}">{{accounts.github_org}}</a>) |
+      email: <a href="mailto:{{contact.email}}">{{contact.email}}</a> |
+      phone: <a href="tel:[1-585-397-5491]">585.397.5491</a> |
+      <a href="https://github.com/atla5/resume/raw/master/build/Resume_Sawyer.pdf" target="_blank">resume</a>
+    </span>
+  </div>
+</footer>
