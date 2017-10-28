@@ -8,9 +8,10 @@ import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 
 import { ResumeService } from "./services/resume.service";
+import { HomeComponent } from './components/home/home.component';
 
 const appRoutes: Routes = [
-  {path:'', component:AboutComponent},
+  {path:'', component:HomeComponent},
   {path:'about', component:AboutComponent},
   {path:'projects', component:ProjectsComponent}
 ];
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     AboutComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
