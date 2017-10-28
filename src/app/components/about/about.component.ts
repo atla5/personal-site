@@ -11,20 +11,6 @@ export class AboutComponent implements OnInit {
   name:string;
   url_resume_download:string;
   objective:string;
-  contact: {
-    phone:string,
-    email:string
-  };
-  website:string;
-  accounts: {
-    github:string,
-    github_org:string,
-    linkedin:string,
-    librarything:string,
-    twitter:string,
-    academia_edu:string
-  };
-  github:string[] = ["",""];
   schools:School[];
   jobs: Job[];
   projects:Project[];
@@ -39,21 +25,7 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
     console.log("initializing 'about' component");
 
-    this.name = "Aidan Sawyer";
     this.objective = "I'm looking for meaningful work involved with the organization, preservation, and expansion of knowledge, with particular regard to library resources and scientific research. By improving the engines which power human understanding, I seek to expedite human progress long-term.";
-    this.contact = {
-      phone: "207.200.6026",
-      email: "aks5238@rit.edu"
-    };
-    this.accounts = {
-      github: "atla5",
-      github_org: "lib-re",
-      linkedin: "aidan-sawyer-8253a5a0",
-      librarything: "aidan.keefe.s",
-      twitter: "Aidan_KS",
-      academia_edu: "AidanSawyer"
-    };
-    this.website = "https://" + this.accounts.github + ".github.io";
     this.skills = {
       intermediate:["java","python","html"],
       functional:["scss","C#","C"],

@@ -1,1 +1,18 @@
+<nav class="intro">
+  <h1>{{name}}</h1>
+    <div class="pbs">
+      <strong>phone</strong>:  <a href="tel:{{contact.phone}}">{{contact.phone}}</a> <>
+      <strong>email</strong>: <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+    </div>
+    <div class="pbs">
+      <strong>github</strong>:
+      <span>
+      <a href="https://github.com/{{accounts.github}}" target="_blank">{{accounts.github}}</a> -
+      <a href="https://github.com/{{accounts.github_org}}" target="_blank">{{accounts.github_org}}</a> <>
+    </span>
+      <strong>website</strong>: <a href="{{website}}" target="_blank">{{website}}</a>
+    </div>
+    <br />
+</nav>
+
 <router-outlet></router-outlet>
