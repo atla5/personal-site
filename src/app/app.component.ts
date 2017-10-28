@@ -36,7 +36,6 @@ export class AppComponent {
       twitter: "Aidan_KS",
       academia_edu: "AidanSawyer"
     };
-    this.website = "https://" + this.accounts.github + ".github.io";
   }
 
 }
