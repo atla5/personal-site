@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ResumeService {
 
-  private base_service_endpoint:string  = "https://raw.githubusercontent.com/atla5/resume/master/";
+  private base_service_endpoint:string  = "https://raw.githubusercontent.com/atla5/resume/master/data/";
   private ENDPOINT_EDUCATION:string     = this.base_service_endpoint + "education.json";
   private ENDPOINT_EXPERIENCE:string    = this.base_service_endpoint + "experience.json";
   private ENDPOINT_PROJECTS:string      = this.base_service_endpoint + "projects.json";
