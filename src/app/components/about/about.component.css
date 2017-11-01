@@ -1,0 +1,19 @@
+h2 {
+  text-transform: uppercase;
+}
+
+.center {
+  text-align: center !important;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.right {
+  float: right;
+}
+
+tr {
+  padding-bottom: 1em;
+}

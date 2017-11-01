@@ -1,0 +1,89 @@
+<div class="jumbotron">
+  <div class="row container">
+    <div class="col-xs-5 col-sm-3 col-md-2">
+      <img src="https://www.gravatar.com/avatar/8e67c47b0cabcd345fa551c6599a78e5?s=115" style="border-radius: 10px">
+    </div>
+    <div class="col-xs-7 col-sm-8 col-md-3 pll">
+      <span class="lead">{{name}}</span>
+      <ul class="list-unstyled">
+        <li><strong>phone</strong>: <a href="tel:{{contact.phone}}">{{contact.phone}}</a></li>
+        <li><strong>email</strong>: <a href="mailto:{{contact.email}}">{{contact.email}}</a></li>
+        <li>
+          <strong>github</strong>:
+          <span>
+            <a href="https://github.com/{{accounts.github}}" target="_blank">{{accounts.github}}</a> -
+            <a href="https://github.com/{{accounts.github_org}}" target="_blank">{{accounts.github_org}}</a>
+          </span>
+        </li>
+        <li class="pts"><a class="btn btn-default btn-sm" href="{{url_resume_download}}">Download Resume</a></li>
+      </ul>
+    </div>
+    <div class="col-xs-12 col-md-7 pts">
+      <p>{{objective}}</p>
+    </div>
+  </div>
+</div>
+
+<div id="education">
+  <h2>Education</h2><hr />
+  <ul>
+    <li *ngFor="let school of schools | slice:0:1">
+      <div>
+        <span class="underline">{{school.school_name}}</span>:  {{school.degree}} in {{school.major}}
+        <em class="right">{{school.time_start}} - {{school.time_end}}</em>
+      </div>
+      <ul>
+        <li *ngFor="let note of school['notes']">{{note}}</li>
+      </ul>
+    </li>
+  </ul>
+  <br />
+</div>
+
+<div id="experience">
+  <h2>Experience</h2><hr />
+  <ul>
+    <li *ngFor="let job of jobs | slice:0:3" class="pbl">
+      <div>
+        <strong><span class="underline">{{job.company_name}}</span>: {{job.position}}</strong>
+        <em class="right">{{job.time_start}} - {{job.time_end}}</em>
+      </div>
+      <div>
+        <em>{{job.advisor_name}} - {{job.advisor_position}} - <a href="mailto:{{job.advisor_contact}}">{{job.advisor_contact}}</a></em>
+        <ul>
+          <li *ngFor="let note of job.responsibilities">{{note}}</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  <br />
+</div>
+
+<div id="projects">
+  <h2>Projects</h2><hr />
+  <ul>
+    <li *ngFor="let project of projects | slice:0:4">
+      <strong><a href="{{project.url_src}}">{{project.name}}</a></strong>
+      <span class="right">{{project.description_short}}</span>
+    </li>
+  </ul>
+  <br />
+</div>
+
+<div id="skills">
+  <h2>Languages and Technologies</h2><hr />
+  <table>
+    <tr>
+      <td><strong>Intermediate</strong></td>
+      <td class="pll">{{skills.intermediate}}</td>
+    </tr>
+    <tr>
+      <td><strong>Functional</strong></td>
+      <td class="pll">{{skills.functional}}</td>
+    </tr>
+    <tr>
+      <td><strong>Novice</strong></td>
+      <td class="pll">{{skills.novice}}</td>
+    </tr>
+  </table>
+</div>
