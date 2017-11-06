@@ -1,6 +1,6 @@
 # Aidan Sawyer
 
-Personal and professional site written with angular, and hosted by github at [atla5.github.io](http://atla5.github.io/).
+Personal and professional site written with angular, and hosted on AWS at [aidan-sawyer.com](http://aidan-sawyer.com/).
 
 ## purpose
 This site was made as:
