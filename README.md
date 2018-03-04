@@ -71,10 +71,8 @@ Specific examples of the implementations of this principle can be seen in the us
 
 - [ ] **optimize design/scope** - ensure everything that can/should be is decoupled, independent, and quick
 - [ ] **implement lazy-loading** - use webworkers (or something similar) to avoid loading everything at once
-- [ ] **custom domain** - move to `aidan-sawyer.com` (or something similar) instead of using the boilerplate `atla5.github.io`
+- [x] **custom domain** - move to `aidan-sawyer.com` instead of using the boilerplate `atla5.github.io`
 - [ ] **API integrations** - use github, google analytics, librarything APIs for richer content and the learning
 - [ ] **implement tags/search** aggregating content based on topic (more on that [here](https://github.com/atla5/blog/blob/master/entries/2017-09-30_for-the-love-of-json.md)) 
 - [ ] **use webcomponents** (or a similar technology) to define and reuse whole components (defined in situ) across repos
 - [ ] **add lib-re subdomain** to showcase my work on library/archive/museum (LAM) tech
-- [ ] **upgrade hosting** to provide working REST services  
- 
