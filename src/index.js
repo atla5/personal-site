@@ -1,8 +1,6 @@
-import {LitElement, html} from 'lit-element';
+import {html, render} from 'lit-html';
 
-class HelloWorld extends LitElement {
-  render(){
-    return html`<h1>Hello World</h1>`;
-  }
-}
-customElements.define('hello-world', HelloWorld);
+const temp_hello = (data) => html`<h1>Hello, ${data.world}</h1>`;
+render(temp_hello({world: 'earth'}), document.querySelector("#hello-world"));
+
+console.log("hello world");
