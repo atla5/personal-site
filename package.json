@@ -3,6 +3,16 @@
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
-  "dependencies": {},
-  "devDependencies": {}
+  "scripts": {
+    "start": "es-dev-server",
+    "postinstall": "pika-web"
+  },
+  "dependencies": {
+    "@vaadin/router": "^1.2.1",
+    "lit-element": "^2.2.1"
+  },
+  "devDependencies": {
+    "@pika/web": "^0.5.1",
+    "es-dev-server": "^1.10.4"
+  }
 }
