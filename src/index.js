@@ -1,6 +1,6 @@
-import {html, render} from 'lit-html';
+import {render} from 'lit-html';
 
-const temp_hello = (data) => html`<h1>Hello, ${data.world}</h1>`;
-render(temp_hello({world: 'earth'}), document.querySelector("#hello-world"));
-
-console.log("hello world");
+// job experience
+import {data_job} from './services.js';
+import {temp_experience} from './templates.js';
+render(temp_experience(data_job), document.getElementById("jobs"));

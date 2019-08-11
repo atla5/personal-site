@@ -1,17 +1,17 @@
-import {html} from 'lit-html/lit-html';
+import {html} from 'lit-html';
 
-export const temp_education = html`
+export const temp_education = (school) => html`
   <div class="education">
-    <span class="underline">${school_name}</span>:  ${degree} in ${major}
-    <em class="right">${time_start} - ${time_end}</em>
-    <ul>${notes.map((note) => html`<li>${note}</li>`)}</ul>
+    <span class="underline">${school.school_name}</span>:  ${school.degree} in ${school.major}
+    <em class="right">${school.time_start} - ${school.time_end}</em>
+    <ul>${school.notes.map((note) => html`<li>${note}</li>`)}</ul>
   </div>`;
 
-export const temp_project = html`
+export const temp_project = (project) => html`
   <strong><a href="${project.url_src}">${project.name}</a></strong>
   <span class="right">${project.description_short}</span>`;
 
-export const temp_project_detail = html`
+export const temp_project_detail = (project) => html`
   <div class="container">
     <strong><a href="${project.url_src}" target="_blank">${project.name}</a></strong>:
     <span class="phm">${project.description_short}</span>
@@ -24,9 +24,9 @@ export const temp_project_detail = html`
     <hr />
   </div>`;
 
-export const temp_experience = html`
+export const temp_experience = (job) => html`
   <div>
-    <strong><span class="underline">${job.company_name}</span>: {job.position}</strong>
+    <strong><span class="underline">${job.company_name}</span>: ${job.position}</strong>
     <em class="right">${job.time_start} - ${job.time_end}</em>
   </div>
   <div>
