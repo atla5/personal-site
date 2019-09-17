@@ -54,9 +54,9 @@ export class AboutComponent implements OnInit {
       academia_edu: "AidanSawyer"
     };
     this.skills = {
-      intermediate:["java","python","html"],
-      functional:["scss","C#","C"],
-      novice:["js","AWS"]
+      intermediate:["js","html","python","java"],
+      functional:["web components","scss"],
+      novice:["C#","C","AWS"]
     };
 
     this.resumeService.getSchools().subscribe( (_schools:School[]) => {
