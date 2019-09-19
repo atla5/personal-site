@@ -4,15 +4,13 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "es-dev-server",
-    "postinstall": "pika-web"
+    "start": "es-dev-server"
   },
   "dependencies": {
     "@vaadin/router": "^1.2.1",
     "lit-html": "^1.1.1"
   },
   "devDependencies": {
-    "@pika/web": "^0.5.1",
     "es-dev-server": "^1.10.4"
   }
 }
