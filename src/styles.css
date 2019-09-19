@@ -1,11 +1,6 @@
-body {
-  width: 95%;
-}
-
-footer {
-  background-color: #eee;
-}
-
+/* -- general utilities -- */
+body { width: 95%; }
+footer { background-color: #eee; }
 
 /* margin/padding utilities */ 
 .phm {
@@ -14,6 +9,7 @@ footer {
 }
 .pls { padding-left: 5px; }
 .pll { padding-left: 15px; }
+.prl { padding-right: 15px; }
 .pbs { padding-bottom: 5px; }
 .pbl { padding-bottom: 15px; }
 .pts { padding-top: 5px; }
@@ -25,3 +21,10 @@ footer {
 /* text utilities */
 .txtc { text-align: center; }
 .large-text { font-size: large; }
+
+/* -- section styles -- */ 
+#skills ul { display: table; }
+#skills ul li { display: table-row; }
+#skills ul li strong, #skills ul li span { 
+  display: table-cell; padding-left: 15px;
+}
