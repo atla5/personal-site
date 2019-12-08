@@ -8,6 +8,7 @@
 
     <title>Aidan Sawyer</title>
     <link rel="icon" type="image/x-icon" href="https://avatars3.githubusercontent.com/u/5565284">
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulib-wc@latest/dist/bundle.min.css">
     <link rel="stylesheet" type="text/css" href="./src/styles.css">
 
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
@@ -15,34 +16,113 @@
   <body>
     <script src="./src/index.js" type="module"></script>
 
-    <section id="header" class="txtc">
-      <h1>Aidan Sawyer</h1>
+    <section id="header" class="txtc pbl">
+      <p><strong class="large-text">Aidan Sawyer</strong></p>
       <em class="large-text">Web Developer</em>
     </section>
 
-    <section id="nojs">
-      <noscript>
-        <hr>
-        <em>
-          This page loads its content from another project (
-          <a href="https://github.com/atla5/resume/">atla5/resume</a>
-          ). If you're not seeing what you think you should, try enabling
-          javascript, or trying a more <a href="https://www.epicbrowser.com/">modern browser</a>.
-        </em>
-        <hr>
-      </noscript>
-    </section>
+    <div class="tabs">
 
-    <h2>Education</h2>
-    <section id="education"><em>loading schools...</em></section>
+      <!-- HOME PAGE -->
+      <input type="radio" name="main-content" id="home" checked>
+      <label for="home">About Me</label>
+      <div name="homepage-content">
+        <h2>About Me</h2>
+        <p>
+          My name is <strong>Aidan Sawyer</strong>. I'm a <strong>Web Developer</strong> with a great 
+          appreciation for simplicity, interoperability, and <strong>separation of concerns</strong>. 
+        </p>
+
+        <p>
+          My goal and purpose on <strong><a href="https://github.com/atla5">github</a></strong>
+          - and in my career more generally - is to create and contribute to projects that 
+          serve to increase the efficiency, depth, and reach of
+          <strong>scholarship and knowledge production</strong> that power human achievement
+          (and enjoyment) across time and in perpetuity.
+        </p>
+
+        <p>
+          This has lead me to positions in and around <strong>academic research and libraries</strong>, 
+          fueled my interest and contributions to open source and open scholarship, and it's what's led me to 
+          create <a href="https://github.com/lib-re"><strong><code>lib-re oa-sys</code></strong></a>.
+        </p>
+        
+        <h2>How I Work</h2>
+        <p>
+          I seek, wherever possible (and practical), to push the boundaries of what can 
+          be done with <strong>the web platform itself</strong>, <em>without</em> defaulting 
+          to the huge <a href="https://technostacks.com/blog/javascript-frameworks/">framework-of-the-day</a>, 
+          some elaborate and complicated <a href="https://github.com/webpack/webpack">build system</a>, 
+          a variety of large <a href="https://en.wikipedia.org/wiki/Dependency_hell">extraneous libraries</a>, 
+          and even - it's true - without <em>vanilla</em> javascript or CSS.
+        </p>
+
+        <p>
+          There are many guiding design principles in support of <strong>why I do this</strong> - which I (have/will) expand upon in 
+          <a href="https://github.com/atla5/blog">my blog</a> - but the most directly applicable term I've found so far is the 
+          <strong><a href="https://github.com/bulib/bulib-wc/wiki/Principle-of-Least-Power">principle of least power</a></strong>.
+          It basically says, don't use a fancy, new <em>sledge</em>-hammer when you can use a trusty, regular old handheld one.
+        </p>
+
+        <p>I follow this principle so doggedly for a <strong>number of reasons</strong>:</p>
+        <ul>
+          <li>I want to <strong>learn the <em>web itself</em></strong>, not a fashionable (but fleeting) abstraction on top of it</li>
+          <li>I want the capabilities of the <strong>web platform to grow</strong> and compound over time</li>
+          <li>I want my work to be more <strong>performant, accessible, and interoperable</strong></li>
+          <li>I want the skills that I learn to <strong>remain useful</strong> over my entire career</li>
+          <li>I want to ensure (for myself and for others) that <strong>my work lasts</strong> (doesn't break)</li>
+          <li>I want my want the projects I work on to be <strong>easy to maintain, update, and predict</strong></li>
+          <li>I find it <strong>challenging and engaging</strong> to test the capacities and find new solutions</li>
+        </ul>
+
+        <h2>How to Contact Me</h2>
+        <p>If you'd like to contact me, the best way is to <a href="mailto:aks5238@rit.edu">email me</a>.</p>
+        <p>
+          If that's not working (or it's related to any of my <a href="https://github.com/atla5?tab=repositories">personal</a> 
+          or <a href="https://github.com/lib-re">lib-re</a> projects), please feel free to 
+          <a href="https://github.com/atla5/personal-site/issues/new">submit an issue</a>.
+        </p>
+      </div>
+      
+      <!-- RESUME -->
+      <input type="radio" name="main-content" id="resume">
+      <label for="resume">My Resume</label>
+      <div name="resume-content">
+        <section name="javascript-disabled">
+          <noscript>
+            <hr>
+            <em>
+              This page loads its content from another project (
+              <a href="https://github.com/atla5/resume/">atla5/resume</a>
+              ). If you're not seeing what you think you should, try enabling
+              javascript, or trying a more <a href="https://www.epicbrowser.com/">modern browser</a>.
+            </em>
+            <hr>
+          </noscript>
+        </section>
+        
+        <section name="javascript-enabled">
+          <h2>Education</h2>
+          <section id="education"><em>loading schools...</em></section>
+          
+          <h2>Experience</h2>
+          <section id="jobs"><em>loading jobs list...</em></section>
+      
+          <h2>Projects</h2>
+          <section id="projects"><em>loading project list...</em></section>
+      
+          <h2>Languages &amp; Technologies</h2>
+          <section id="skills"><em>loading skills...</em></section>
+        </section>
+      </div>
+
+      <!-- PROJECTS -->
+      <input type="radio" name="main-content" id="projects">
+      <label for="projects">My Projects</label>
+      <div name="projects-content">
+        <section id="projects"><em>loading project list...</em></section>
+      </div>
+    </div>
     
-    <h2>Experience</h2>
-    <section id="jobs"><em>loading jobs list...</em></section>
-
-    <h2>Projects</h2>
-    <section id="projects"><em>loading project list...</em></section>
-
-    <h2>Languages &amp; Technologies</h2>
-    <section id="skills"><em>loading skills...</em></section>
   </body>
 </html>
