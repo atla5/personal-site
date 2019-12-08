@@ -54,7 +54,7 @@ async function renderJobs(jobs){
   render(jobsTemplate(jobs.slice(0,3)), document.getElementById("jobs"));
 };
 
-/* -- PROJECTS -- */
+/* -- PROJECTS (resume) -- */
 let projects_url = url_base_data+"projects.json";
 getDataFromJSONFileAndCallRenderFunction(projects_url, renderProjects);
 const temp_project = (project) => html`
@@ -66,24 +66,30 @@ const temp_projects = (projects) =>
   html`<ul>${projects.map((project) => temp_project(project))}</ul>`;
 
 async function renderProjects(projects){
-  render(temp_projects(projects.slice(0,4)), document.getElementById("projects"));
+  render(temp_projects(projects.slice(0,4)), document.getElementById("projects-resume"));
 }
 
 
-/* -- PROJECT DETAIL -- */
-// @TODO: implement the project detail page
+/* -- PROJECT (detail) -- */
+getDataFromJSONFileAndCallRenderFunction(projects_url, renderProjectsDetail);
 const temp_project_detail = (project) => html`
-  <div class="container">
+  <li>
     <strong><a href="${project.url_src}" target="_blank">${project.name}</a></strong>:
     <span class="phm">${project.description_short}</span>
     <p>${project.description_long}</p>
     <div>
-      <strong>languages:</strong> ${project.languages}
+      <strong>languages:</strong> ${project.languages.join(', ')}
       <span class="phm">|</span>
-      <strong>tags:</strong> ${project.tags}
+      <strong>tags:</strong> ${project.tags.join(', ')}
     </div>
     <hr />
-  </div>`;
+  </li>`;
+  const temp_projects_detail = (projects) => 
+    html`<ul>${projects.map((project) => temp_project_detail(project))}</ul>`;
+  async function renderProjectsDetail(projects){
+    render(temp_projects_detail(projects.slice(0,8)), document.getElementById("projects-detail"));
+  }
+
 
 
 /* -- SKILLS -- */
