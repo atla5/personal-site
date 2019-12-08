@@ -128,3 +128,13 @@ if(window.location.search.includes("page=")){
   let inputToSetChecked = document.querySelector(`.tabs > input[id='${pageName}']`) || document.querySelector(`.tabs > input`);
   inputToSetChecked.checked = true;
 }
+
+/* ensure page reload preserves currently selected tab (track selected tab with '?page=' search param) */
+let tabInputs = document.querySelectorAll('.tabs > input');
+for(let i=0; i<tabInputs.length; i++){
+  tabInputs[i].addEventListener('click', (ev) => {
+    const params = new URLSearchParams(window.location.search);
+    params.set("page", ev.target.id || "");
+    window.history.replaceState({}, "", decodeURIComponent(`${window.location.pathname}?${params}`));
+  }
+)};
