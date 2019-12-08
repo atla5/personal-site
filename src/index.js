@@ -1,4 +1,4 @@
-import {render, html} from 'https://unpkg.com/lit-html/lit-html?module';
+import {render, html} from 'https://unpkg.com/lit-html@1.1.1/lit-html?module';
 
 // store urls for grabbing data from atla5/resume
 const url_base_data = "https://raw.githubusercontent.com/atla5/resume/master/data/";
@@ -119,4 +119,12 @@ async function renderSkills(skills_json){
   }
 
   render(temp_languages(novice, functional, intermediate), document.getElementById("skills"));
+}
+
+/* enable setting of active tab via the a '?page=' search paramater */
+if(window.location.search.includes("page=")){
+  let startIndex = window.location.search.indexOf("page=") + "page=".length;
+  let pageName = window.location.search.substring(startIndex);
+  let inputToSetChecked = document.querySelector(`.tabs > input[id='${pageName}']`) || document.querySelector(`.tabs > input`);
+  inputToSetChecked.checked = true;
 }
