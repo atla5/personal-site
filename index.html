@@ -8,7 +8,7 @@
 
     <title>Aidan Sawyer</title>
     <link rel="icon" type="image/x-icon" href="https://avatars3.githubusercontent.com/u/5565284">
-    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulib-wc@latest/dist/bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulib-wc@latest/dist/bundle.min.css">
     <link rel="stylesheet" type="text/css" href="./src/styles.css">
 
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
@@ -17,7 +17,7 @@
     <script src="./src/index.js" type="module"></script>
 
     <header class="mbm pam">
-      <img class="txtv" src="https://avatars3.githubusercontent.com/u/5565284" style="border-radius: 10px">
+      <img class="txtv" loading="lazy" src="https://avatars3.githubusercontent.com/u/5565284" style="border-radius: 10px">
       <div class="pam txtc txtv">
         <strong class="larger-text">Aidan Sawyer</strong>
         <br /><br />
@@ -29,15 +29,27 @@
         <li>
           <strong>github</strong>:
           <span>
-            <a target="_blank" href="https://github.com/atla5">atla5</a> -
-            <a target="_blank" href="https://github.com/lib-re">lib-re</a>
+            <a href="https://github.com/atla5">atla5</a> -
+            <a href="https://github.com/lib-re">lib-re</a>
           </span>
         </li>
       </ul>
     </header>
 
-    <div class="tabs">
+    <section name="javascript-disabled">
+      <noscript>
+        <hr>
+        <em>
+          This page loads much of its content from another project (
+          <a href="https://github.com/atla5/resume/">atla5/resume</a>
+          ). If you're not seeing what you think you should, try enabling
+          javascript, or trying a more <a href="https://www.epicbrowser.com/">modern browser</a>.
+        </em>
+        <hr>
+      </noscript>
+    </section>
 
+    <div class="tabs">
       <!-- HOME PAGE -->
       <input type="radio" name="main-content" id="home" checked>
       <label for="home">About Me</label>
@@ -103,32 +115,17 @@
       <input type="radio" name="main-content" id="resume">
       <label for="resume">My Resume</label>
       <div name="resume-content">
-        <section name="javascript-disabled">
-          <noscript>
-            <hr>
-            <em>
-              This page loads its content from another project (
-              <a href="https://github.com/atla5/resume/">atla5/resume</a>
-              ). If you're not seeing what you think you should, try enabling
-              javascript, or trying a more <a href="https://www.epicbrowser.com/">modern browser</a>.
-            </em>
-            <hr>
-          </noscript>
-        </section>
+        <h2>Education</h2>
+        <section id="education"><em>loading schools...</em></section>
         
-        <section name="javascript-enabled">
-          <h2>Education</h2>
-          <section id="education"><em>loading schools...</em></section>
-          
-          <h2>Experience</h2>
-          <section id="jobs"><em>loading jobs list...</em></section>
-      
-          <h2>Projects</h2>
-          <section id="projects-resume"><em>loading project list...</em></section>
-      
-          <h2>Languages &amp; Technologies</h2>
-          <section id="skills"><em>loading skills...</em></section>
-        </section>
+        <h2>Experience</h2>
+        <section id="jobs"><em>loading jobs list...</em></section>
+    
+        <h2>Projects</h2>
+        <section id="projects-resume"><em>loading project list...</em></section>
+    
+        <h2>Languages &amp; Technologies</h2>
+        <section id="skills"><em>loading skills...</em></section>
       </div>
 
       <!-- PROJECTS -->
@@ -147,7 +144,7 @@
     <footer class="mtm txtc pam">
       <div class="container text-muted">
         Created in 2019 by Aidan Sawyer 
-        (<a href="https://github.com/atla5">atla5</a>| <a href="https://github.com/lib-re">lib-re</a>)
+        (<a href="https://github.com/atla5">atla5</a> | <a href="https://github.com/lib-re">lib-re</a>)
       </div>
     </footer>
   </body>

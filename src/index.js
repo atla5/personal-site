@@ -98,9 +98,9 @@ getDataFromJSONFileAndCallRenderFunction(skills_url, renderSkills);
 
 const temp_languages = (novice, functional, intermediate) => html`
   <ul>
-    <li><strong>Intermediate</strong><span>${intermediate.toString()}</span></li>
-    <li><strong>Functional</strong><span>${functional.toString()}</span></li>
-    <li><strong>Novice</strong><span>${novice.toString()}</span></li>
+    <li><strong>Intermediate</strong><span>${intermediate.join(", ")}</span></li>
+    <li><strong>Functional</strong><span>${functional.join(", ")}</span></li>
+    <li><strong>Novice</strong><span>${novice.join(", ")}</span></li>
   </ul>
 `;
 
