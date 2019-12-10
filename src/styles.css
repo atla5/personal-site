@@ -1,42 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-  margin: 0 5%;
+/* -- general utilities -- */
+body { width: 95%; }
+header { 
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
+header img { width: 75px; height: 75px; }
+footer, header { 
+  background-color: black;
+  color: whitesmoke; 
+}
+footer a, footer a:visited, 
+  header a, header a:visited {
+  color: whitesmoke;
+}
+footer a:focus, header a:focus { font-weight: bold; }
+footer a:hover, header a:hover { color: white; }
 
+/* margin/padding utilities */ 
+.pam { padding: 10px; }
 .phm {
   padding-left: 10px;
   padding-right: 10px;
 }
+.pls { padding-left: 5px; }
+.pll { padding-left: 15px; }
+.prl { padding-right: 15px; }
+.pbs { padding-bottom: 5px; }
+.pbl { padding-bottom: 15px; }
+.pts { padding-top: 5px; }
+.mla { margin-left: auto; }
+.mrs { margin-right: 5px; }
+.mtm { margin-top: 10px; }
+.mbm { margin-bottom: 10px; }
 
-.pls {
-  padding-left: 5px;
+/* text utilities */
+.txtc { text-align: center; }
+.txtv { margin-top: auto; margin-bottom: auto; }
+.txtr { text-align: right; }
+.large-text { font-size: large; }
+.larger-text { font-size: x-large; }
+
+/* -- section styles -- */ 
+ul.no-bullet { list-style: none; }
+#skills ul { display: table; }
+#skills ul li { display: table-row; }
+#skills ul li strong, #skills ul li span { 
+  display: table-cell; padding-left: 15px;
 }
 
-.pll {
-  padding-left: 15px;
+/* -- layouts -- */
+a.btn { 
+  background-color: white; 
+  color: black !important; 
+  text-decoration: none;
+  margin-top: 5px; 
+  padding: 2px; 
+  border-radius: 5px; 
+  border: 1px solid black;
 }
+a.btn:hover { color: black !important; background-color: whitesmoke; }
+.flex { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
 
-.pbs {
-  padding-bottom: 5px;
-}
-
-.pbl {
-  padding-bottom: 15px;
-}
-
-.pts {
-  padding-top: 5px;
-}
-
-.mvm {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.center {
-  text-align: center;
-}
-
-footer {
-  background-color: #eee;
+@media only screen and (max-width: 450px){ 
+  .tabs > #resume-download { margin-right: auto; }
+  header > * { margin-left: auto; margin-right: auto; text-align: center; }
 }
