@@ -54,6 +54,7 @@ async function renderJobs(jobs){
   render(jobsTemplate(jobs.slice(0,3)), document.getElementById("jobs"));
 };
 
+
 /* -- PROJECTS (resume) -- */
 let projects_url = url_base_data+"projects.json";
 getDataFromJSONFileAndCallRenderFunction(projects_url, renderProjects);
@@ -91,7 +92,6 @@ const temp_project_detail = (project) => html`
   }
 
 
-
 /* -- SKILLS -- */
 let skills_url = url_base_data+"additional.json";
 getDataFromJSONFileAndCallRenderFunction(skills_url, renderSkills);
@@ -120,6 +120,50 @@ async function renderSkills(skills_json){
 
   render(temp_languages(novice, functional, intermediate), document.getElementById("skills"));
 }
+
+
+/* -- PRESENTATIONS -- */
+let presentations_url = "https://raw.githubusercontent.com/atla5/resume/presentations/data/"+"presentations.json";
+getDataFromJSONFileAndCallRenderFunction(presentations_url, renderTalks);
+const temp_talk = (talk) => html`
+  <li>
+    <div style="display: flex; flex-wrap: wrapped;">
+      <iframe class="pal" width="450" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" 
+        src="https://docs.google.com/presentation/d/e/2PACX-1vTEFVU1iY8Uz0EY1jAzwJaXuUNJwEGLpLTozAWOiPd-t_PBb6P7Z-NabxS5rr1u4yf0CLWmeJg3fDvk/embed"></iframe>
+      <div class="pll txtv">
+        <h3 class="mbm">${talk.title} [<a target="_blank" href="https://docs.google.com/presentation/d/${talk.slides_id}/edit?usp=sharing">slides</a>]</h3>
+        <em class="pbl">${talk.subtitle}</em>
+        <p>${talk.description}</p>
+        <div>
+          <strong><a href="${talk.conference_url}">${talk.conference_name}</a></strong> - 
+          <span>${humanize_date(talk.date)}</div>
+        </div>
+      </div>
+    </div>
+  </li><hr />`;
+const temp_talks = (talks) => html`<ul class="no-bullet"><hr />${talks.map((talk) => temp_talk(talk))}</ul>`;
+async function renderTalks(presentations){
+  render(temp_talks(presentations), document.getElementById("talks-list"));
+}
+
+
+/* -- HELPERS -- */
+
+
+/* humanize dates from '2020-03-23' to 'March 3, 2020' */
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+function humanize_date(yyyy_mm_dd){
+  if(yyyy_mm_dd.indexOf('-') == -1){ return yyyy_mm_dd; }
+  else{
+    let tokens = yyyy_mm_dd.split('-')
+    let year = tokens[0];
+    let month = parseInt(tokens[1]);
+    let day = tokens[2];
+
+    return `${months[month-1]} ${day}, ${year}`;
+  }
+}
+
 
 /* enable setting of active tab via the a '?page=' search paramater */
 if(window.location.search.includes("page=")){
