@@ -123,13 +123,12 @@ async function renderSkills(skills_json){
 
 
 /* -- PRESENTATIONS -- */
-let presentations_url = "https://raw.githubusercontent.com/atla5/resume/presentations/data/"+"presentations.json";
+let presentations_url = url_base_data+"presentations.json";
 getDataFromJSONFileAndCallRenderFunction(presentations_url, renderTalks);
 const temp_talk = (talk) => html`
   <li>
     <div style="display: flex; flex-wrap: wrapped;">
-      <iframe class="pal" width="450" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" 
-        src="https://docs.google.com/presentation/d/e/2PACX-1vTEFVU1iY8Uz0EY1jAzwJaXuUNJwEGLpLTozAWOiPd-t_PBb6P7Z-NabxS5rr1u4yf0CLWmeJg3fDvk/embed"></iframe>
+      <iframe class="pal" width="450" src="${talk.slides_embed}" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       <div class="pll txtv">
         <h3 class="mbm">${talk.title} [<a target="_blank" href="https://docs.google.com/presentation/d/${talk.slides_id}/edit?usp=sharing">slides</a>]</h3>
         <em class="pbl">${talk.subtitle}</em>
