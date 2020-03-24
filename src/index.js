@@ -86,7 +86,7 @@ const temp_project_detail = (project) => html`
     <hr />
   </li>`;
   const temp_projects_detail = (projects) => 
-    html`<ul>${projects.map((project) => temp_project_detail(project))}</ul>`;
+    html`<ul class="no-bullet pll">${projects.map((project) => temp_project_detail(project))}</ul>`;
   async function renderProjectsDetail(projects){
     render(temp_projects_detail(projects.slice(0,8)), document.getElementById("projects-detail"));
   }
@@ -127,20 +127,20 @@ let presentations_url = url_base_data+"presentations.json";
 getDataFromJSONFileAndCallRenderFunction(presentations_url, renderTalks);
 const temp_talk = (talk) => html`
   <li>
-    <div style="display: flex; flex-wrap: wrapped;">
-      <iframe class="pal" width="450" src="${talk.slides_embed}" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <div class="flex">
+      <iframe class="pal" width="400" src="${talk.slides_embed}" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
       <div class="pll txtv">
         <h3 class="mbm">${talk.title} [<a target="_blank" href="https://docs.google.com/presentation/d/${talk.slides_id}/edit?usp=sharing">slides</a>]</h3>
         <em class="pbl">${talk.subtitle}</em>
         <p>${talk.description}</p>
         <div>
-          <strong><a href="${talk.conference_url}">${talk.conference_name}</a></strong> - 
+          <strong><a href="${talk.conference_url}" target="_blank">${talk.conference_name}</a></strong> - 
           <span>${humanize_date(talk.date)}</div>
         </div>
       </div>
     </div>
   </li><hr />`;
-const temp_talks = (talks) => html`<ul class="no-bullet"><hr />${talks.map((talk) => temp_talk(talk))}</ul>`;
+const temp_talks = (talks) => html`<ul class="no-bullet pll"><hr />${talks.map((talk) => temp_talk(talk))}</ul>`;
 async function renderTalks(presentations){
   render(temp_talks(presentations), document.getElementById("talks-list"));
 }

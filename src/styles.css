@@ -38,7 +38,8 @@ a.btn {
   color: black !important; 
   text-decoration: none;
   margin-top: 5px; 
-  padding: 2px; 
+  margin-bottom: 5px; 
+  padding: 5px; 
   border-radius: 5px; 
   border: 1px solid black;
 }
