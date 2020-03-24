@@ -17,23 +17,6 @@ footer a, footer a:visited,
 footer a:focus, header a:focus { font-weight: bold; }
 footer a:hover, header a:hover { color: white; }
 
-/* margin/padding utilities */ 
-.pam { padding: 10px; }
-.phm {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.pls { padding-left: 5px; }
-.pll { padding-left: 15px; }
-.prl { padding-right: 15px; }
-.pbs { padding-bottom: 5px; }
-.pbl { padding-bottom: 15px; }
-.pts { padding-top: 5px; }
-.mla { margin-left: auto; }
-.mrs { margin-right: 5px; }
-.mtm { margin-top: 10px; }
-.mbm { margin-bottom: 10px; }
-
 /* text utilities */
 .txtc { text-align: center; }
 .txtv { margin-top: auto; margin-bottom: auto; }
@@ -61,9 +44,12 @@ a.btn {
 }
 a.btn:hover { color: black !important; background-color: whitesmoke; }
 .flex { display: flex; }
-.flex-wrap { flex-wrap: wrap; }
 
-@media only screen and (max-width: 450px){ 
+/* -- responsiveness -- */
+
+@media only screen and (max-width: 650px){
+  .flex { flex-wrap: wrap; }
+  .flex iframe { width: 100%; height: 250px; }
   .tabs > #resume-download { margin-right: auto; }
   header > * { margin-left: auto; margin-right: auto; text-align: center; }
 }
