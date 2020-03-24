@@ -1,3 +1,10 @@
+/* -- css variable exceptions -- */
+body {
+  --color-button-background: white;
+  --color-button-background-dark: whitesmoke;
+  --color-button-text: black;
+}
+
 /* -- general utilities -- */
 body { width: 95%; }
 header { 
@@ -7,12 +14,12 @@ header {
 }
 header img { width: 75px; height: 75px; }
 footer, header { 
-  background-color: black;
-  color: whitesmoke; 
+  background-color: var(--color-primary-background, black);
+  color: var(--color-primary-text, whitesmoke); 
 }
 footer a, footer a:visited, 
   header a, header a:visited {
-  color: whitesmoke;
+  color: var(--color-primary-text, whitesmoke);
 }
 footer a:focus, header a:focus { font-weight: bold; }
 footer a:hover, header a:hover { color: white; }
@@ -34,16 +41,20 @@ ul.no-bullet { list-style: none; }
 
 /* -- layouts -- */
 a.btn { 
-  background-color: white; 
-  color: black !important; 
+  background-color: var(--color-button-background, white); 
+  color: var(--color-button-text, black) !important; 
   text-decoration: none;
-  margin-top: 5px; 
-  margin-bottom: 5px; 
-  padding: 5px; 
+  margin-top: var(--padding-small, 5px); 
+  margin-bottom: var(--padding-small, 5px); 
+  padding: var(--padding-small, 5px); 
   border-radius: 5px; 
-  border: 1px solid black;
+  border: 1px solid var(--color-button-text, black);
 }
-a.btn:hover { color: black !important; background-color: whitesmoke; }
+a.btn:hover { 
+  color: var(--color-button-text, black) !important; 
+  background-color: var(--color-button-background-dark, whitesmoke); 
+  text-decoration: underline;
+}
 .flex { display: flex; }
 
 /* -- responsiveness -- */
