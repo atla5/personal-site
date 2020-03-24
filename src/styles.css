@@ -24,6 +24,15 @@ footer a, footer a:visited,
 footer a:focus, header a:focus { font-weight: bold; }
 footer a:hover, header a:hover { color: white; }
 
+/* style no-javascript segments to stand out more */
+noscript > p {
+  padding-top: var(--padding-large, 10px);
+  padding-bottom: var(--padding-large, 10px);
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  font-style: italic;
+}
+
 /* text utilities */
 .txtc { text-align: center; }
 .txtv { margin-top: auto; margin-bottom: auto; }
@@ -32,7 +41,7 @@ footer a:hover, header a:hover { color: white; }
 .larger-text { font-size: x-large; }
 
 /* -- section styles -- */ 
-ul.no-bullet { list-style: none; }
+ul.no-bullet, ol.no-bullet { list-style: none; }
 #skills ul { display: table; }
 #skills ul li { display: table-row; }
 #skills ul li strong, #skills ul li span { 
