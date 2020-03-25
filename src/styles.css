@@ -1,3 +1,10 @@
+/* -- css variable exceptions -- */
+body {
+  --color-button-background: white;
+  --color-button-background-dark: whitesmoke;
+  --color-button-text: black;
+}
+
 /* -- general utilities -- */
 body { width: 95%; }
 header { 
@@ -7,32 +14,24 @@ header {
 }
 header img { width: 75px; height: 75px; }
 footer, header { 
-  background-color: black;
-  color: whitesmoke; 
+  background-color: var(--color-primary-background, black);
+  color: var(--color-primary-text, whitesmoke); 
 }
 footer a, footer a:visited, 
   header a, header a:visited {
-  color: whitesmoke;
+  color: var(--color-primary-text, whitesmoke);
 }
 footer a:focus, header a:focus { font-weight: bold; }
 footer a:hover, header a:hover { color: white; }
 
-/* margin/padding utilities */ 
-.pam { padding: 10px; }
-.phm {
-  padding-left: 10px;
-  padding-right: 10px;
+/* style no-javascript segments to stand out more */
+noscript > p {
+  padding-top: var(--padding-large, 10px);
+  padding-bottom: var(--padding-large, 10px);
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  font-style: italic;
 }
-.pls { padding-left: 5px; }
-.pll { padding-left: 15px; }
-.prl { padding-right: 15px; }
-.pbs { padding-bottom: 5px; }
-.pbl { padding-bottom: 15px; }
-.pts { padding-top: 5px; }
-.mla { margin-left: auto; }
-.mrs { margin-right: 5px; }
-.mtm { margin-top: 10px; }
-.mbm { margin-bottom: 10px; }
 
 /* text utilities */
 .txtc { text-align: center; }
@@ -42,7 +41,7 @@ footer a:hover, header a:hover { color: white; }
 .larger-text { font-size: x-large; }
 
 /* -- section styles -- */ 
-ul.no-bullet { list-style: none; }
+ul.no-bullet, ol.no-bullet { list-style: none; }
 #skills ul { display: table; }
 #skills ul li { display: table-row; }
 #skills ul li strong, #skills ul li span { 
@@ -51,19 +50,27 @@ ul.no-bullet { list-style: none; }
 
 /* -- layouts -- */
 a.btn { 
-  background-color: white; 
-  color: black !important; 
+  background-color: var(--color-button-background, white); 
+  color: var(--color-button-text, black) !important; 
   text-decoration: none;
-  margin-top: 5px; 
-  padding: 2px; 
+  margin-top: var(--padding-small, 5px); 
+  margin-bottom: var(--padding-small, 5px); 
+  padding: var(--padding-small, 5px); 
   border-radius: 5px; 
-  border: 1px solid black;
+  border: 1px solid var(--color-button-text, black);
 }
-a.btn:hover { color: black !important; background-color: whitesmoke; }
+a.btn:hover { 
+  color: var(--color-button-text, black) !important; 
+  background-color: var(--color-button-background-dark, whitesmoke); 
+  text-decoration: underline;
+}
 .flex { display: flex; }
-.flex-wrap { flex-wrap: wrap; }
 
-@media only screen and (max-width: 450px){ 
+/* -- responsiveness -- */
+
+@media only screen and (max-width: 650px){
+  .flex { flex-wrap: wrap; }
+  .flex iframe { width: 100%; height: 250px; }
   .tabs > #resume-download { margin-right: auto; }
   header > * { margin-left: auto; margin-right: auto; text-align: center; }
 }

@@ -8,7 +8,9 @@
 
     <title>Aidan Sawyer</title>
     <link rel="icon" type="image/x-icon" href="https://avatars3.githubusercontent.com/u/5565284">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bulib-wc@latest/dist/bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/atla5/utils/css/spacing.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/atla5/utils/css/variables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/atla5/utils/css/tabs.min.css">
     <link rel="stylesheet" type="text/css" href="./src/styles.css">
 
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
@@ -38,14 +40,12 @@
 
     <section name="javascript-disabled">
       <noscript>
-        <hr>
-        <em>
+        <p>
           This page loads much of its content from another project (
           <a href="https://github.com/atla5/resume/">atla5/resume</a>
           ). If you're not seeing what you think you should, try enabling
           javascript, or trying a more <a href="https://www.epicbrowser.com/">modern browser</a>.
-        </em>
-        <hr>
+        </p>
       </noscript>
     </section>
 
@@ -81,7 +81,7 @@
           to the huge <a href="https://technostacks.com/blog/javascript-frameworks/">framework-of-the-day</a>, 
           some elaborate and complicated <a href="https://github.com/webpack/webpack">build system</a>, 
           a variety of large <a href="https://en.wikipedia.org/wiki/Dependency_hell">extraneous libraries</a>, 
-          and even - it's true - without <em>vanilla</em> javascript or CSS.
+          and even <em>vanilla</em> javascript or CSS.
         </p>
 
         <p>
@@ -115,6 +115,13 @@
       <input type="radio" name="main-content" id="resume">
       <label for="resume">My Resume</label>
       <div name="resume-content">
+        <noscript>
+          <p>
+            if you have javascript turned off, you're not able to see a bunch of information from my resume.
+            you can <a href="https://github.com/atla5/resume/raw/master/build/Resume_Sawyer.pdf" download>download a pdf version</a>
+            or browse through <a href="https://github.com/atla5/resume/">the repository</a>.
+          </p>
+        </noscript>
         <h2>Education</h2>
         <section id="education"><em>loading schools...</em></section>
         
@@ -132,7 +139,28 @@
       <input type="radio" name="main-content" id="projects">
       <label for="projects">My Projects</label>
       <div name="projects-content">
+        <noscript>
+          <p>
+            if you have javascript turned off, you're not able to see a 
+            <a href="https://github.com/atla5/resume/blob/master/data/projects.json">list of projects</a>.
+          </p>
+        </noscript>
+        <h2>Projects I've Worked On</h2>
         <section id="projects-detail"><em>loading project list...</em></section>
+      </div>
+      
+      <!-- PRESENTATIONS -->
+      <input type="radio" name="main-content" id="talks">
+      <label for="talks">My Talks</label>
+      <div name="talks-content">
+        <noscript>
+          <p>
+            if you have javascript turned off, you're not able to see a 
+            <a href="https://github.com/atla5/resume/blob/master/data/presentations.json">list of talks</a>.
+          </p>
+        </noscript>
+        <h2>Talks I've Given</h2>
+        <section id="talks-list"><em>loading talks...</em></section>
       </div>
 
       <!-- resume download-->

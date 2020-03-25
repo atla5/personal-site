@@ -54,6 +54,7 @@ async function renderJobs(jobs){
   render(jobsTemplate(jobs.slice(0,3)), document.getElementById("jobs"));
 };
 
+
 /* -- PROJECTS (resume) -- */
 let projects_url = url_base_data+"projects.json";
 getDataFromJSONFileAndCallRenderFunction(projects_url, renderProjects);
@@ -85,11 +86,10 @@ const temp_project_detail = (project) => html`
     <hr />
   </li>`;
   const temp_projects_detail = (projects) => 
-    html`<ul>${projects.map((project) => temp_project_detail(project))}</ul>`;
+    html`<ul class="no-bullet pll">${projects.map((project) => temp_project_detail(project))}</ul>`;
   async function renderProjectsDetail(projects){
     render(temp_projects_detail(projects.slice(0,8)), document.getElementById("projects-detail"));
   }
-
 
 
 /* -- SKILLS -- */
@@ -120,6 +120,49 @@ async function renderSkills(skills_json){
 
   render(temp_languages(novice, functional, intermediate), document.getElementById("skills"));
 }
+
+
+/* -- PRESENTATIONS -- */
+let presentations_url = url_base_data+"presentations.json";
+getDataFromJSONFileAndCallRenderFunction(presentations_url, renderTalks);
+const temp_talk = (talk) => html`
+  <li>
+    <div class="flex">
+      <iframe class="pal" width="400" src="${talk.slides_embed}" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      <div class="pll txtv">
+        <h3 class="mbm">${talk.title} [<a target="_blank" href="https://docs.google.com/presentation/d/${talk.slides_id}/edit?usp=sharing">slides</a>]</h3>
+        <em class="pbl">${talk.subtitle}</em>
+        <p>${talk.description}</p>
+        <div>
+          <strong><a href="${talk.conference_url}" target="_blank">${talk.conference_name}</a></strong> - 
+          <span>${humanize_date(talk.date)}</div>
+        </div>
+      </div>
+    </div>
+  </li><hr />`;
+const temp_talks = (talks) => html`<ul class="no-bullet pll"><hr />${talks.map((talk) => temp_talk(talk))}</ul>`;
+async function renderTalks(presentations){
+  render(temp_talks(presentations), document.getElementById("talks-list"));
+}
+
+
+/* -- HELPERS -- */
+
+
+/* humanize dates from '2020-03-23' to 'March 3, 2020' */
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+function humanize_date(yyyy_mm_dd){
+  if(yyyy_mm_dd.indexOf('-') == -1){ return yyyy_mm_dd; }
+  else{
+    let tokens = yyyy_mm_dd.split('-')
+    let year = tokens[0];
+    let month = parseInt(tokens[1]);
+    let day = tokens[2];
+
+    return `${months[month-1]} ${day}, ${year}`;
+  }
+}
+
 
 /* enable setting of active tab via the a '?page=' search paramater */
 if(window.location.search.includes("page=")){

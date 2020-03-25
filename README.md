@@ -29,6 +29,7 @@ $ npm run start
 |home|welcome, introduction, and worklog|
 |about|resume for employers displaying data from [atla5/resume](https://github.com/atla5/resume/)|
 |projects|list of projects with descriptions stored in [projects.json](https://github.com/atla5/resume/blob/master/data/projects.json)|
+|talks|presentations and workshops I've given over the years, fed by [presentations.json](https://github.com/atla5/resume/blob/master/data/presentations.json)|
 
 
 ## design rationale
