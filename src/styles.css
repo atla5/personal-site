@@ -24,6 +24,8 @@ footer a, footer a:visited,
 footer a:focus, header a:focus { font-weight: bold; }
 footer a:hover, header a:hover { color: white; }
 
+.underline { text-decoration: underline; }
+
 /* style no-javascript segments to stand out more */
 noscript > p {
   padding-top: var(--padding-large, 10px);

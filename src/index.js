@@ -18,16 +18,18 @@ function getDataFromJSONFileAndCallRenderFunction(data_url, renderFunction) {
 
 /* --  EDUCATION -- */
 let school_url = url_base_data+"education.json";
-getDataFromJSONFileAndCallRenderFunction(school_url, renderEducation);
-let temp_education = (school) => html`
+getDataFromJSONFileAndCallRenderFunction(school_url, renderSchools);
+const schoolsTemplate = (schools) => 
+  html`<ul>${schools.map((school) => school_template(school))}</ul>`;
+const school_template = (school) => html`
 <div class="education">
-  <span class="underline">${school.school_name}</span>:  ${school.degree} in ${school.major}
+  <strong><span class="underline">${school.school_name}</span>:  ${school.degree}</strong>
   <em class="right">${school.time_start} - ${school.time_end}</em>
   <ul>${school.notes.map((note) => html`<li>${note}</li>`)}</ul>
 </div>`;
 
-async function renderEducation(schools){
-  render(temp_education(schools[0]), document.getElementById("education"));
+async function renderSchools(schools){
+  render(schoolsTemplate(schools.slice(0,2)), document.getElementById("education"));
 }
 
 
@@ -51,7 +53,7 @@ const jobsTemplate = (jobs) =>
   html`<ul>${jobs.map((job) => job_template(job))}</ul>`;
 
 async function renderJobs(jobs){
-  render(jobsTemplate(jobs.slice(0,3)), document.getElementById("jobs"));
+  render(jobsTemplate(jobs.slice(0,4)), document.getElementById("jobs"));
 };
 
 
