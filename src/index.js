@@ -29,7 +29,8 @@ const school_template = (school) => html`
 </div>`;
 
 async function renderSchools(schools){
-  render(schoolsTemplate(schools.slice(0,2)), document.getElementById("education"));
+  // render everything but my high school. no need for that
+  render(schoolsTemplate(schools.slice(0, schools.length - 1 )), document.getElementById("education"));
 }
 
 
@@ -44,7 +45,7 @@ const job_template = (job) => html`
     </div>
     <div>
       <em>${job.advisor_name} - ${job.advisor_position} - 
-        <a href="mailto:${job.advisor_contact}">${job.advisor_contact}</a>
+        <a href="${job.advisor_contact.includes("@") ? "mailto:" : "tel:"} ${job.advisor_contact}">${job.advisor_contact}</a>
       </em>
       <ul>${job.responsibilities.map((note) => html`<li>${note}</li>`)}</ul>
     </div>
@@ -53,7 +54,7 @@ const jobsTemplate = (jobs) =>
   html`<ul>${jobs.map((job) => job_template(job))}</ul>`;
 
 async function renderJobs(jobs){
-  render(jobsTemplate(jobs.slice(0,4)), document.getElementById("jobs"));
+  render(jobsTemplate(jobs.slice(0,5)), document.getElementById("jobs"));
 };
 
 
