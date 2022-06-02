@@ -5,6 +5,11 @@ body {
   --color-button-text: black;
 }
 
+aside { 
+  font-style: italic;
+  color: #333333;
+}
+
 /* -- general utilities -- */
 body { width: 95%; }
 header { 
@@ -23,6 +28,8 @@ footer a, footer a:visited,
 }
 footer a:focus, header a:focus { font-weight: bold; }
 footer a:hover, header a:hover { color: white; }
+
+.underline { text-decoration: underline; }
 
 /* style no-javascript segments to stand out more */
 noscript > p {
